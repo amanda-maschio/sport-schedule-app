@@ -8,7 +8,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 
-public class cadastrar_item extends AppCompatActivity {
+public class CadastroItem extends AppCompatActivity {
 
     private EditText nome;
     private EditText valor;
@@ -17,7 +17,7 @@ public class cadastrar_item extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_cadastrar_item);
+        setContentView(R.layout.activity_cad_item);
 
         Button botaoCadastrar = (Button) findViewById(R.id.cadastrar);
 
@@ -35,13 +35,13 @@ public class cadastrar_item extends AppCompatActivity {
 
     }
 
-    protected item objItem (){
+    protected Item objItem (){
 
         nome = (EditText) findViewById(R.id.txtNome);
         valor = (EditText) findViewById(R.id.txtValor);
         quantidade = (EditText) findViewById(R.id.txtQtd);
 
-        item enviaObj = new item();
+        Item enviaObj = new Item();
         enviaObj.setNome(nome.getText().toString());
         enviaObj.setNome(valor.getText().toString());
         enviaObj.setNome(quantidade.getText().toString());

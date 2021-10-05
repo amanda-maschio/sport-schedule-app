@@ -5,23 +5,36 @@
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
-        android:label="@string/app_name"
+        android:label="Sport Schedule"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.SportScheduleApp">
-        <activity
-            android:name=".cadastrar_item"
-            android:exported="true" />
+        <activity android:name=".Login" android:label="Login"></activity>
 
         <activity
-            android:name=".dias_itens"
-            android:exported="true" >
+            android:name=".CadastroItem"
+            android:exported="true"
+            android:label="Cadastro de Itens"
+            />
+
+        <activity
+            android:name=".CadastroQuadra1"
+            android:exported="true"
+            android:label="Cadastro de Quadra"
+            />
+
+        <activity
+            android:name=".CadastroQuadra2"
+            android:exported="true"
+            android:label="Cadastro de Quadra"
+            >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
         <activity
             android:name=".MainActivity"
             android:exported="true">

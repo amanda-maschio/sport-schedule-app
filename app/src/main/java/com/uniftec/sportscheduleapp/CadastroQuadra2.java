@@ -7,11 +7,8 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
-import android.widget.EditText;
-import android.widget.ListView;
-import android.widget.TextView;
 
-public class dias_itens extends AppCompatActivity {
+public class CadastroQuadra2 extends AppCompatActivity {
 
 
     private RecyclerView listaItens;
@@ -19,7 +16,7 @@ public class dias_itens extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_dias_itens);
+        setContentView(R.layout.activity_cad_quadra_2);
 
         Button botaoCadastrarItem = (Button) findViewById(R.id.btCadastrarItem);
 
@@ -27,7 +24,7 @@ public class dias_itens extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
-                Intent chamaCadastroItem = new Intent(dias_itens.this, cadastrar_item.class);
+                Intent chamaCadastroItem = new Intent(CadastroQuadra2.this, CadastroItem.class);
                 startActivityForResult(chamaCadastroItem,2);
 
             }

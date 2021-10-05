@@ -2,7 +2,7 @@ package com.uniftec.sportscheduleapp;
 
 import java.io.Serializable;
 
-public class item implements Serializable {
+public class Item implements Serializable {
 
     private String nome;
     private String valor;
