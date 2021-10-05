@@ -10,7 +10,6 @@ import android.widget.Button;
 
 public class CadastroQuadra2 extends AppCompatActivity {
 
-
     private RecyclerView listaItens;
 
     @Override
@@ -18,34 +17,30 @@ public class CadastroQuadra2 extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_cad_quadra_2);
 
-        Button botaoCadastrarItem = (Button) findViewById(R.id.btCadastrarItem);
-
-        botaoCadastrarItem.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-
-                Intent chamaCadastroItem = new Intent(CadastroQuadra2.this, CadastroItem.class);
-                startActivityForResult(chamaCadastroItem,2);
-
-            }
-        });
     }
 
+    public void botaoProximoQuadra3(View v) {
+
+    }
+
+    public void botaoAnteriorQuadra1(View v) {
+        Intent telaQuadra1 = new Intent(this, CadastroQuadra1.class);
+        startActivity(telaQuadra1);
+    }
+
+    public void botaoCadastroItem(View v) {
+        Intent telaItem = new Intent(this, CadastroItem.class);
+        startActivity(telaItem);
+    }
 
     @Override
     public void onActivityResult(int requestCode, int resultCode, Intent data) {
 
-        if(requestCode == 2){
-            if(resultCode == 1){
-
-
-
+        if (requestCode == 2) {
+            if (resultCode == 1) {
             }
         }
         super.onActivityResult(requestCode, resultCode, data);
     }
-
-
-
 
 }

@@ -140,6 +140,7 @@
         android:backgroundTint="#2E3145"
         android:text="Voltar"
         android:textSize="10dp"
+        android:onClick="botaoAnteriorQuadra1"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/proximo"
         app:layout_constraintStart_toStartOf="parent" />
@@ -153,6 +154,7 @@
         android:backgroundTint="#2E3145"
         android:text="Cadastrar Item"
         android:textSize="10dp"
+        android:onClick="botaoCadastroItem"
         app:layout_constraintBottom_toTopOf="@+id/proximo"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
