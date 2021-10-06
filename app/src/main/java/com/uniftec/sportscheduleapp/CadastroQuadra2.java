@@ -7,7 +7,6 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.Button;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -16,14 +15,15 @@ public class CadastroQuadra2 extends AppCompatActivity {
 
     private RecyclerView listaItens;
     private List<Item> lista = new ArrayList<>();
-    private adapterListItens adaptador;
+    private AdapterListItens adaptador;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_cad_quadra_2);
+
         listaItens = findViewById(R.id.listaItens);
-        adaptador = new adapterListItens(lista);
+        adaptador = new AdapterListItens(lista);
         listaItens.setAdapter(adaptador);
         listaItens.setLayoutManager(new LinearLayoutManager(this));
 
@@ -36,7 +36,7 @@ public class CadastroQuadra2 extends AppCompatActivity {
 
     public void botaoCadastroItem(View v) {
         Intent telaItem = new Intent(this, CadastroItem.class);
-        startActivityForResult(telaItem,2);
+        startActivityForResult(telaItem, 2);
     }
 
     @Override
@@ -48,8 +48,8 @@ public class CadastroQuadra2 extends AppCompatActivity {
                 adaptador.notifyDataSetChanged();
             }
         }
-
         super.onActivityResult(requestCode, resultCode, data);
+
     }
 
 }

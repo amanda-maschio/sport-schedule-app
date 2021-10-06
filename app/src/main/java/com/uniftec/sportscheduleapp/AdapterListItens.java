@@ -5,30 +5,29 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
-import androidx.annotation.CallSuper;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.List;
 
-public class adapterListItens extends RecyclerView.Adapter <adapterListItens.linhaItem> {
+public class AdapterListItens extends RecyclerView.Adapter<AdapterListItens.linhaItem> {
 
     protected List<Item> items;
 
-    public adapterListItens(List<Item> items) {
+    public AdapterListItens(List<Item> items) {
         this.items = items;
     }
 
     @NonNull
     @Override
-    public adapterListItens.linhaItem onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+    public AdapterListItens.linhaItem onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         LayoutInflater layoutInflater = LayoutInflater.from(parent.getContext());
         View view = layoutInflater.inflate(R.layout.activity_layout_lista, parent, false);
-        return new adapterListItens.linhaItem(view);
+        return new AdapterListItens.linhaItem(view);
     }
 
     @Override
-    public void onBindViewHolder(@NonNull adapterListItens.linhaItem holder, int position) {
+    public void onBindViewHolder(@NonNull AdapterListItens.linhaItem holder, int position) {
         holder.fill((Item) items.toArray()[position]);
     }
 
@@ -50,7 +49,7 @@ public class adapterListItens extends RecyclerView.Adapter <adapterListItens.lin
             qtdItem = itemView.findViewById(R.id.escreveQtd);
         }
 
-        public void fill(Item data){
+        public void fill(Item data) {
             nomeItem.setText(data.getNome());
             valorItem.setText(data.getValor());
             qtdItem.setText(data.getQuantidade());

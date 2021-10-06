@@ -12,166 +12,128 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:gravity="center"
-        android:text="\nDias Disponíveis"
+        android:text="\nDIAS DISPONÍVEIS"
         android:textSize="15dp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteY="51dp" />
-
-    <TextView
-        android:id="@+id/itens"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="12dp"
-        android:gravity="center"
-        android:text="Itens Disponíveis"
-        android:textSize="15dp"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/dom" />
+        tools:layout_editor_absoluteY="4dp" />
 
     <CheckBox
         android:id="@+id/seg"
-        android:layout_width="0dp"
+        android:layout_width="150dp"
         android:layout_height="30dp"
         android:layout_marginStart="16dp"
         android:layout_marginTop="12dp"
         android:layout_marginEnd="16dp"
-        android:text="Segunda-Feira"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.666"
+        android:text="Segunda-feira"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/dias" />
 
     <CheckBox
         android:id="@+id/ter"
-        android:layout_width="0dp"
+        android:layout_width="150dp"
         android:layout_height="30dp"
         android:layout_marginStart="16dp"
+        android:layout_marginTop="52dp"
         android:layout_marginEnd="16dp"
-        android:text="Terça-Feira"
+        android:text="Terça-feira"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/seg"
+        app:layout_constraintTop_toBottomOf="@+id/dias"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <CheckBox
+        android:id="@+id/qua"
+        android:layout_width="150dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="16dp"
+        android:text="Quarta-feira"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/seg" />
 
     <CheckBox
-        android:id="@+id/qua"
-        android:layout_width="0dp"
+        android:id="@+id/qui"
+        android:layout_width="150dp"
         android:layout_height="30dp"
         android:layout_marginStart="16dp"
+        android:layout_marginTop="94dp"
         android:layout_marginEnd="16dp"
-        android:text="Quarta-Feira"
+        android:text="Quinta-feira"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/ter" />
+        app:layout_constraintHorizontal_bias="0.507"
+        app:layout_constraintStart_toEndOf="@+id/qua"
+        app:layout_constraintTop_toBottomOf="@+id/ter"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <CheckBox
-        android:id="@+id/qui"
-        android:layout_width="0dp"
+        android:id="@+id/sex"
+        android:layout_width="150dp"
         android:layout_height="30dp"
         android:layout_marginStart="16dp"
+        android:layout_marginTop="12dp"
         android:layout_marginEnd="16dp"
-        android:text="Quinta-Feira"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
+        android:text="Sexta-feira"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/qua" />
 
     <CheckBox
-        android:id="@+id/sex"
-        android:layout_width="0dp"
-        android:layout_height="30dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginEnd="16dp"
-        android:text="Sexta-Feira"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/qui" />
-
-    <CheckBox
         android:id="@+id/sab"
-        android:layout_width="0dp"
+        android:layout_width="150dp"
         android:layout_height="30dp"
         android:layout_marginStart="16dp"
+        android:layout_marginTop="136dp"
         android:layout_marginEnd="16dp"
         android:text="Sábado"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/sex" />
+        app:layout_constraintHorizontal_bias="0.507"
+        app:layout_constraintStart_toEndOf="@+id/sex"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <CheckBox
         android:id="@+id/dom"
-        android:layout_width="0dp"
+        android:layout_width="150dp"
         android:layout_height="30dp"
         android:layout_marginStart="16dp"
+        android:layout_marginTop="12dp"
         android:layout_marginEnd="16dp"
         android:text="Domingo"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/sab" />
+        app:layout_constraintTop_toBottomOf="@+id/sex" />
 
-    <Button
-        android:id="@+id/proximo"
+    <TextView
+        android:id="@+id/itens"
         android:layout_width="0dp"
-        android:layout_height="40dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginEnd="16dp"
-        android:layout_marginBottom="16dp"
-        android:backgroundTint="#2E3145"
-        android:text="Próximo"
-        android:textSize="10dp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:gravity="center"
+        android:text="ITENS DISPONÍVEIS"
+        android:textSize="15dp"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toEndOf="@+id/voltar" />
-
-    <Button
-        android:id="@+id/voltar"
-        android:layout_width="0dp"
-        android:layout_height="40dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginEnd="16dp"
-        android:layout_marginBottom="16dp"
-        android:backgroundTint="#2E3145"
-        android:text="Voltar"
-        android:textSize="10dp"
-        android:onClick="botaoAnteriorQuadra1"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/proximo"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <Button
-        android:id="@+id/btCadastrarItem"
-        android:layout_width="0dp"
-        android:layout_height="40dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginEnd="16dp"
-        android:backgroundTint="#2E3145"
-        android:text="Cadastrar Item"
-        android:textSize="10dp"
-        android:onClick="botaoCadastroItem"
-        app:layout_constraintBottom_toTopOf="@+id/proximo"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/itens"
-        app:layout_constraintVertical_bias="1.0" />
+        app:layout_constraintTop_toBottomOf="@+id/dom" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/listaItens"
-        android:layout_width="0dp"
+        android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_marginStart="16dp"
         android:layout_marginEnd="16dp"
         android:layout_marginBottom="24dp"
-        app:layout_constraintBottom_toTopOf="@+id/btCadastrarItem"
+        android:scrollbarAlwaysDrawVerticalTrack="true"
+        app:layout_constraintBottom_toTopOf="@+id/cadastrarItem"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tabela"
         app:layout_constraintVertical_bias="0.451" />
@@ -189,28 +151,58 @@
 
         <TextView
             android:id="@+id/escreveNome1"
-            android:layout_width="150dp"
+            android:layout_width="wrap_content"
             android:layout_height="match_parent"
-            android:layout_marginStart="4dp"
+            android:layout_marginStart="0dp"
             android:gravity="center"
             android:text="TextView" />
 
         <TextView
             android:id="@+id/escreveValor1"
-            android:layout_width="133dp"
+            android:layout_width="wrap_content"
             android:layout_height="match_parent"
-            android:layout_marginStart="4dp"
+            android:layout_marginStart="55dp"
             android:gravity="center"
             android:text="TextView" />
 
         <TextView
             android:id="@+id/escreveQtd1"
-            android:layout_width="69dp"
-            android:layout_height="30dp"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginStart="55dp"
             android:gravity="center"
             android:text="TextView" />
 
     </LinearLayout>
 
+    <Button
+        android:id="@+id/cadastrarItem"
+        android:layout_width="0dp"
+        android:layout_height="45dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        android:backgroundTint="#2E3145"
+        android:onClick="botaoCadastroItem"
+        android:text="Cadastrar Item"
+        android:textSize="11dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/proximo"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/proximo"
+        android:layout_width="0dp"
+        android:layout_height="45dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        android:backgroundTint="#2E3145"
+        android:text="Próximo"
+        android:textSize="11dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/cadastrarItem" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -15,24 +15,28 @@
             android:name=".CadastroItem"
             android:exported="true"
             android:label="Cadastro de Itens"
+            android:parentActivityName=".CadastroQuadra2"
             />
 
         <activity
             android:name=".CadastroQuadra1"
             android:exported="true"
-            android:label="Cadastro de Quadra"
-            />
-
-        <activity
-            android:name=".CadastroQuadra2"
-            android:exported="true"
-            android:label="Cadastro de Quadra"
+            android:label="Cadastro da Quadra"
+            android:parentActivityName=".MainActivity"
             >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".CadastroQuadra2"
+            android:exported="true"
+            android:label="Cadastro da Quadra"
+            android:parentActivityName=".CadastroQuadra1"
+            >
         </activity>
 
         <activity
