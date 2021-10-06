@@ -19,6 +19,20 @@ public class CadastroItem extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_cad_item);
 
+        Button botaoCadastrar = (Button) findViewById(R.id.cadastrar);
+
+        botaoCadastrar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                Intent resultado = new Intent();
+                resultado.putExtra("item",objItem());
+                setResult(1,resultado);
+                finish();
+
+            }
+        });
+
     }
 
     protected Item objItem() {
@@ -29,8 +43,8 @@ public class CadastroItem extends AppCompatActivity {
 
         Item enviaObj = new Item();
         enviaObj.setNome(nome.getText().toString());
-        enviaObj.setNome(valor.getText().toString());
-        enviaObj.setNome(quantidade.getText().toString());
+        enviaObj.setValor(valor.getText().toString());
+        enviaObj.setQuantidade(quantidade.getText().toString());
 
         return enviaObj;
 
