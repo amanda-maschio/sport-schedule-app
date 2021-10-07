@@ -26,12 +26,6 @@ public class CadastroQuadra2 extends AppCompatActivity {
         adaptador = new AdapterListItens(lista);
         listaItens.setAdapter(adaptador);
         listaItens.setLayoutManager(new LinearLayoutManager(this));
-
-    }
-
-    public void botaoAnteriorQuadra1(View v) {
-        Intent telaQuadra1 = new Intent(this, CadastroQuadra1.class);
-        startActivity(telaQuadra1);
     }
 
     public void botaoCadastroItem(View v) {
@@ -39,7 +33,6 @@ public class CadastroQuadra2 extends AppCompatActivity {
         startActivityForResult(telaItem, 2);
     }
 
-    @Override
     public void onActivityResult(int requestCode, int resultCode, Intent data) {
 
         if (requestCode == 2) {
@@ -49,7 +42,11 @@ public class CadastroQuadra2 extends AppCompatActivity {
             }
         }
         super.onActivityResult(requestCode, resultCode, data);
+    }
 
+    public void botaoProximoImagens (View v){
+        Intent telaImagens = new Intent(this, CadastroQuadra3.class);
+        startActivity(telaImagens);
     }
 
 }

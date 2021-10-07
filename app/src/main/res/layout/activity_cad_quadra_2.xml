@@ -200,6 +200,7 @@
         android:backgroundTint="#2E3145"
         android:text="Próximo"
         android:textSize="11dp"
+        android:onClick="botaoProximoImagens"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"

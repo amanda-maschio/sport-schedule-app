@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     package="com.uniftec.sportscheduleapp">
 
     <application
@@ -37,6 +38,14 @@
             android:label="Cadastro da Quadra"
             android:parentActivityName=".CadastroQuadra1"
             >
+        </activity>
+
+        <activity
+            android:name=".CadastroQuadra3"
+            android:exported="true"
+            android:label="Cadastro da Quadra"
+            android:parentActivityName=".CadastroQuadra1"
+            tools:ignore="Instantiatable">
         </activity>
 
         <activity
