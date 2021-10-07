@@ -39,7 +39,7 @@ public class CadastroItem extends AppCompatActivity {
 
         nome = (EditText) findViewById(R.id.txtNome);
         valor = (EditText) findViewById(R.id.txtValor);
-        quantidade = (EditText) findViewById(R.id.txtQtd);
+        quantidade = (EditText) findViewById(R.id.txtQuantidade);
 
         Item enviaObj = new Item();
         enviaObj.setNome(nome.getText().toString());

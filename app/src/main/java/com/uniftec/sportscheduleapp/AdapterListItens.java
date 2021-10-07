@@ -44,9 +44,9 @@ public class AdapterListItens extends RecyclerView.Adapter<AdapterListItens.linh
 
         public linhaItem(@NonNull View itemView) {
             super(itemView);
-            nomeItem = itemView.findViewById(R.id.escreveNome);
-            valorItem = itemView.findViewById(R.id.escreveValor);
-            qtdItem = itemView.findViewById(R.id.escreveQtd);
+            nomeItem = itemView.findViewById(R.id.txtNome);
+            valorItem = itemView.findViewById(R.id.txtValor);
+            qtdItem = itemView.findViewById(R.id.txtQuantidade);
         }
 
         public void fill(Item data) {

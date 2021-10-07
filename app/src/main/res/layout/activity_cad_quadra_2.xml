@@ -8,7 +8,7 @@
     tools:context=".CadastroQuadra2">
 
     <TextView
-        android:id="@+id/dias"
+        android:id="@+id/lblDias"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:gravity="center"
@@ -22,7 +22,7 @@
         tools:layout_editor_absoluteY="4dp" />
 
     <CheckBox
-        android:id="@+id/seg"
+        android:id="@+id/cbSegunda"
         android:layout_width="150dp"
         android:layout_height="30dp"
         android:layout_marginStart="16dp"
@@ -31,23 +31,23 @@
         android:text="Segunda-feira"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/dias" />
+        app:layout_constraintTop_toBottomOf="@+id/lblDias" />
 
     <CheckBox
-        android:id="@+id/ter"
+        android:id="@+id/cbTerca"
         android:layout_width="150dp"
         android:layout_height="30dp"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="52dp"
+        android:layout_marginTop="55dp"
         android:layout_marginEnd="16dp"
         android:text="Terça-feira"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/seg"
-        app:layout_constraintTop_toBottomOf="@+id/dias"
+        app:layout_constraintStart_toEndOf="@+id/cbSegunda"
+        app:layout_constraintTop_toBottomOf="@+id/lblDias"
         app:layout_constraintTop_toTopOf="parent" />
 
     <CheckBox
-        android:id="@+id/qua"
+        android:id="@+id/cbQuarta"
         android:layout_width="150dp"
         android:layout_height="30dp"
         android:layout_marginStart="16dp"
@@ -56,24 +56,24 @@
         android:text="Quarta-feira"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/seg" />
+        app:layout_constraintTop_toBottomOf="@+id/cbSegunda" />
 
     <CheckBox
-        android:id="@+id/qui"
+        android:id="@+id/cbQuinta"
         android:layout_width="150dp"
         android:layout_height="30dp"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="94dp"
+        android:layout_marginTop="98dp"
         android:layout_marginEnd="16dp"
         android:text="Quinta-feira"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.507"
-        app:layout_constraintStart_toEndOf="@+id/qua"
-        app:layout_constraintTop_toBottomOf="@+id/ter"
+        app:layout_constraintStart_toEndOf="@+id/cbQuarta"
+        app:layout_constraintTop_toBottomOf="@+id/cbTerca"
         app:layout_constraintTop_toTopOf="parent" />
 
     <CheckBox
-        android:id="@+id/sex"
+        android:id="@+id/cbSexta"
         android:layout_width="150dp"
         android:layout_height="30dp"
         android:layout_marginStart="16dp"
@@ -82,23 +82,23 @@
         android:text="Sexta-feira"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/qua" />
+        app:layout_constraintTop_toBottomOf="@+id/cbQuarta" />
 
     <CheckBox
-        android:id="@+id/sab"
+        android:id="@+id/cbSabado"
         android:layout_width="150dp"
         android:layout_height="30dp"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="136dp"
+        android:layout_marginTop="139dp"
         android:layout_marginEnd="16dp"
         android:text="Sábado"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.507"
-        app:layout_constraintStart_toEndOf="@+id/sex"
+        app:layout_constraintStart_toEndOf="@+id/cbSexta"
         app:layout_constraintTop_toTopOf="parent" />
 
     <CheckBox
-        android:id="@+id/dom"
+        android:id="@+id/cbDomingo"
         android:layout_width="150dp"
         android:layout_height="30dp"
         android:layout_marginStart="16dp"
@@ -107,10 +107,10 @@
         android:text="Domingo"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/sex" />
+        app:layout_constraintTop_toBottomOf="@+id/cbSexta" />
 
     <TextView
-        android:id="@+id/itens"
+        android:id="@+id/lblItens"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="15dp"
@@ -121,7 +121,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/dom" />
+        app:layout_constraintTop_toBottomOf="@+id/cbDomingo" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/listaItens"
@@ -135,11 +135,11 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tabela"
+        app:layout_constraintTop_toBottomOf="@+id/llTabela"
         app:layout_constraintVertical_bias="0.451" />
 
     <LinearLayout
-        android:id="@+id/tabela"
+        android:id="@+id/llTabela"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
@@ -147,27 +147,27 @@
         android:layout_marginEnd="16dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/itens">
+        app:layout_constraintTop_toBottomOf="@+id/lblItens">
 
         <TextView
-            android:id="@+id/escreveNome1"
-            android:layout_width="100dp"
+            android:id="@+id/txtItem"
+            android:layout_width="96dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="0dp"
             android:textAlignment="center"
             android:text="Item" />
 
         <TextView
-            android:id="@+id/escreveValor1"
-            android:layout_width="100dp"
+            android:id="@+id/txtValor"
+            android:layout_width="96dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="0dp"
             android:textAlignment="center"
             android:text="Valor" />
 
         <TextView
-            android:id="@+id/escreveQtd1"
-            android:layout_width="100dp"
+            android:id="@+id/txtQuantidade"
+            android:layout_width="96dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="0dp"
             android:textAlignment="center"
@@ -176,7 +176,7 @@
     </LinearLayout>
 
     <Button
-        android:id="@+id/cadastrarItem"
+        android:id="@+id/btnCadastrarItem"
         android:layout_width="0dp"
         android:layout_height="45dp"
         android:layout_marginStart="16dp"
@@ -187,11 +187,11 @@
         android:text="Cadastrar Item"
         android:textSize="11dp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/proximo"
+        app:layout_constraintEnd_toStartOf="@+id/btnProximo"
         app:layout_constraintStart_toStartOf="parent" />
 
     <Button
-        android:id="@+id/proximo"
+        android:id="@+id/btnProximo"
         android:layout_width="0dp"
         android:layout_height="45dp"
         android:layout_marginStart="16dp"
@@ -204,6 +204,6 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toEndOf="@+id/cadastrarItem" />
+        app:layout_constraintStart_toEndOf="@+id/btnCadastrarItem" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
