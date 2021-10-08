@@ -1,4 +1,4 @@
-package com.uniftec.sportscheduleapp.controller;
+package com.uniftec.sportscheduleapp.entities;
 
 import java.io.Serializable;
 

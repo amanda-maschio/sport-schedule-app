@@ -1,4 +1,4 @@
-package com.uniftec.sportscheduleapp.entities;
+package com.uniftec.sportscheduleapp.controller;
 
 import android.view.LayoutInflater;
 import android.view.View;
@@ -8,8 +8,8 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.uniftec.sportscheduleapp.controller.Item;
 import com.uniftec.sportscheduleapp.R;
+import com.uniftec.sportscheduleapp.entities.Item;
 
 import java.util.List;
 

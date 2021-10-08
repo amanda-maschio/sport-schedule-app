@@ -9,6 +9,7 @@ import android.widget.Button;
 import android.widget.EditText;
 
 import com.uniftec.sportscheduleapp.R;
+import com.uniftec.sportscheduleapp.entities.Item;
 
 public class CadastroItem extends AppCompatActivity {
 

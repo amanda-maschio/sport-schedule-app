@@ -9,7 +9,7 @@ import android.os.Bundle;
 import android.view.View;
 
 import com.uniftec.sportscheduleapp.R;
-import com.uniftec.sportscheduleapp.entities.AdapterListItens;
+import com.uniftec.sportscheduleapp.entities.Item;
 
 import java.util.ArrayList;
 import java.util.List;
