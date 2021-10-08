@@ -1,4 +1,4 @@
-package com.uniftec.sportscheduleapp;
+package com.uniftec.sportscheduleapp.controller;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -7,6 +7,8 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+
+import com.uniftec.sportscheduleapp.R;
 
 public class CadastroItem extends AppCompatActivity {
 

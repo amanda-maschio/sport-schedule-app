@@ -10,10 +10,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.SportScheduleApp">
-        <activity android:name=".Login" android:label="Login"></activity>
 
         <activity
-            android:name=".Splash"
+            android:name=".controller.Splash"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -23,40 +22,56 @@
         </activity>
 
         <activity
-            android:name=".MainActivity"
-            android:exported="true">
+            android:name=".controller.Login"
+            android:label="Login">
         </activity>
 
         <activity
-            android:name=".CadastroQuadra1"
+            android:name=".controller.CadastroQuadra1"
             android:exported="true"
             android:label="Cadastro da Quadra"
-            android:parentActivityName=".MainActivity"
+            android:parentActivityName=".controller.Login"
             >
 
         </activity>
 
         <activity
-            android:name=".CadastroQuadra2"
+            android:name=".controller.CadastroQuadra2"
             android:exported="true"
             android:label="Cadastro da Quadra"
-            android:parentActivityName=".CadastroQuadra1"
+            android:parentActivityName=".controller.CadastroQuadra1"
             >
         </activity>
 
         <activity
-            android:name=".CadastroQuadra3"
+            android:name=".controller.CadastroQuadra3"
             android:exported="true"
             android:label="Cadastro da Quadra"
-            android:parentActivityName=".CadastroQuadra2"
+            android:parentActivityName=".controller.CadastroQuadra2"
             tools:ignore="Instantiatable">
         </activity>
 
         <activity
-            android:name=".CadastroItem"
+            android:name=".controller.CadastroItem"
             android:exported="true"
             android:label="Cadastro de Itens"
-            android:parentActivityName=".CadastroQuadra2"
+            android:parentActivityName=".controller.CadastroQuadra2"
+            />
+
+        <activity
+            android:name=".controller.LocalizaQuadra"
+            android:exported="true"
+            android:label="Encontrar uma Quadra"
+            />
+
+        <activity
+            android:name=".controller.QuadraInfo"
+            android:exported="true"
+            />
+
+        <activity
+            android:name=".controller.QuadraReserva"
+            android:exported="true"
             />
 
     </application>

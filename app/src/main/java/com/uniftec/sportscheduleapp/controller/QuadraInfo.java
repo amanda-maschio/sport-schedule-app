@@ -1,14 +1,16 @@
-package com.uniftec.sportscheduleapp;
+package com.uniftec.sportscheduleapp.controller;
 
 import android.os.Bundle;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-public class Login extends AppCompatActivity {
+import com.uniftec.sportscheduleapp.R;
+
+public class QuadraInfo extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_login);
+        setContentView(R.layout.activity_quadra_info);
     }
 }

@@ -1,4 +1,4 @@
-package com.uniftec.sportscheduleapp;
+package com.uniftec.sportscheduleapp.controller;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
@@ -7,6 +7,9 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+
+import com.uniftec.sportscheduleapp.R;
+import com.uniftec.sportscheduleapp.entities.AdapterListItens;
 
 import java.util.ArrayList;
 import java.util.List;

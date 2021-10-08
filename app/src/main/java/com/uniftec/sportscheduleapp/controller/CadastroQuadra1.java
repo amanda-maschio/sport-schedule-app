@@ -1,10 +1,13 @@
-package com.uniftec.sportscheduleapp;
+package com.uniftec.sportscheduleapp.controller;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 
 import androidx.appcompat.app.AppCompatActivity;
+
+import com.uniftec.sportscheduleapp.R;
+import com.uniftec.sportscheduleapp.controller.CadastroQuadra2;
 
 public class CadastroQuadra1 extends AppCompatActivity {
 
