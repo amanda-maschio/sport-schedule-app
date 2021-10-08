@@ -10,7 +10,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.SportScheduleApp">
-
+        <activity
+            android:name=".tela_inicial_locatario"
+            android:exported="true" />
         <activity
             android:name=".controller.Splash"
             android:exported="true">
@@ -20,66 +22,44 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
         <activity
             android:name=".controller.BemVindo"
             android:exported="true"
-            android:theme="@style/Theme.AppCompat.NoActionBar">
-        </activity>
-
+            android:theme="@style/Theme.AppCompat.NoActionBar"></activity>
         <activity
             android:name=".controller.Login"
-            android:label="Login">
-        </activity>
-
+            android:label="Login"></activity>
         <activity
             android:name=".controller.CadastroQuadra1"
             android:exported="true"
             android:label="Cadastro da Quadra"
-            android:parentActivityName=".controller.Login"
-            >
-
-        </activity>
-
+            android:parentActivityName=".controller.Login"></activity>
         <activity
             android:name=".controller.CadastroQuadra2"
             android:exported="true"
             android:label="Cadastro da Quadra"
-            android:parentActivityName=".controller.CadastroQuadra1"
-            >
-        </activity>
-
+            android:parentActivityName=".controller.CadastroQuadra1"></activity>
         <activity
             android:name=".controller.CadastroQuadra3"
             android:exported="true"
             android:label="Cadastro da Quadra"
             android:parentActivityName=".controller.CadastroQuadra2"
-            tools:ignore="Instantiatable">
-        </activity>
-
+            tools:ignore="Instantiatable"></activity>
         <activity
             android:name=".controller.CadastroItem"
             android:exported="true"
             android:label="Cadastro de Itens"
-            android:parentActivityName=".controller.CadastroQuadra2"
-            />
-
+            android:parentActivityName=".controller.CadastroQuadra2" />
         <activity
             android:name=".controller.LocalizaQuadra"
             android:exported="true"
-            android:label="Encontrar uma Quadra"
-            />
-
+            android:label="Encontrar uma Quadra" />
         <activity
             android:name=".controller.QuadraInfo"
-            android:exported="true"
-            />
-
+            android:exported="true" />
         <activity
             android:name=".controller.QuadraReserva"
-            android:exported="true"
-            />
-
+            android:exported="true" />
     </application>
 
 </manifest>
