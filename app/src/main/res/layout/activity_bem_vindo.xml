@@ -8,11 +8,12 @@
 
     <ImageView
         android:id="@+id/imageView3"
-        android:layout_width="320dp"
+        android:layout_width="match_parent"
         android:layout_height="320dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
+        android:scaleType="fitXY"
         app:srcCompat="@drawable/sport_schedule_background"
         tools:ignore="MissingConstraints" />
 
@@ -36,7 +37,7 @@
         android:layout_marginTop="10dp"
         android:textColor="@android:color/darker_gray"
         android:gravity="center"
-        android:text="Faça reservas ou alugue quadras de maneira fácil e rápida utilizando nosso app.\nPara começar selecione o seu perfil."
+        android:text="Faça reservas ou alugue quadras de maneira fácil e rápida utilizando nosso app. Para começar, selecione o seu perfil."
         android:textSize="12dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

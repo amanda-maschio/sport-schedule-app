@@ -3,27 +3,26 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="..\:/Users/Leonardo-NB/Documents/Android Studio/sport-schedule-app/app/src/main/res/layout/activity_bem_vindo.xml" value="0.5111940298507462" />
-        <entry key="..\:/Users/Leonardo-NB/Documents/Android Studio/sport-schedule-app/app/src/main/res/layout/activity_cad_item.xml" value="0.14270833333333333" />
-        <entry key="..\:/Users/Leonardo-NB/Documents/Android Studio/sport-schedule-app/app/src/main/res/layout/activity_cad_quadra_1.xml" value="0.27291666666666664" />
-        <entry key="..\:/Users/Leonardo-NB/Documents/Android Studio/sport-schedule-app/app/src/main/res/layout/activity_cad_quadra_2.xml" value="0.27291666666666664" />
-        <entry key="..\:/Users/Leonardo-NB/Documents/Android Studio/sport-schedule-app/app/src/main/res/layout/activity_cad_quadra_3.xml" value="0.5" />
-        <entry key="..\:/Users/Leonardo-NB/Documents/Android Studio/sport-schedule-app/app/src/main/res/layout/activity_cadastrar_item.xml" value="0.27291666666666664" />
-        <entry key="..\:/Users/Leonardo-NB/Documents/Android Studio/sport-schedule-app/app/src/main/res/layout/activity_dias_itens.xml" value="0.27291666666666664" />
-        <entry key="..\:/Users/Leonardo-NB/Documents/Android Studio/sport-schedule-app/app/src/main/res/layout/activity_login.xml" value="0.27291666666666664" />
+        <entry key="..\:/Users/Amanda Maschio/AndroidStudioProjects/SportScheduleApp/app/src/main/res/layout/activity_bem_vindo.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/Amanda Maschio/AndroidStudioProjects/SportScheduleApp/app/src/main/res/layout/activity_cad_item.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/Amanda Maschio/AndroidStudioProjects/SportScheduleApp/app/src/main/res/layout/activity_cad_quadra_1.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/Amanda Maschio/AndroidStudioProjects/SportScheduleApp/app/src/main/res/layout/activity_cad_quadra_2.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/Amanda Maschio/AndroidStudioProjects/SportScheduleApp/app/src/main/res/layout/activity_cad_quadra_3.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/Amanda Maschio/AndroidStudioProjects/SportScheduleApp/app/src/main/res/layout/activity_cadastrar_item.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/Amanda Maschio/AndroidStudioProjects/SportScheduleApp/app/src/main/res/layout/activity_cadastro_quadra_1.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/Amanda Maschio/AndroidStudioProjects/SportScheduleApp/app/src/main/res/layout/activity_dias_itens.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/Amanda Maschio/AndroidStudioProjects/SportScheduleApp/app/src/main/res/layout/activity_layout_lista.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/Amanda Maschio/AndroidStudioProjects/SportScheduleApp/app/src/main/res/layout/activity_localizar_quadras.xml" value="0.49" />
+        <entry key="..\:/Users/Amanda Maschio/AndroidStudioProjects/SportScheduleApp/app/src/main/res/layout/activity_login.xml" value="0.49" />
+        <entry key="..\:/Users/Amanda Maschio/AndroidStudioProjects/SportScheduleApp/app/src/main/res/layout/activity_main.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/Amanda Maschio/AndroidStudioProjects/SportScheduleApp/app/src/main/res/layout/activity_quadra_info.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/Amanda Maschio/AndroidStudioProjects/SportScheduleApp/app/src/main/res/layout/activity_quadra_reserva.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/Amanda Maschio/AndroidStudioProjects/SportScheduleApp/app/src/main/res/layout/activity_splash.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/Amanda Maschio/AndroidStudioProjects/SportScheduleApp/app/src/main/res/layout/activity_tela_inicial_locatario.xml" value="0.67" />
+        <entry key="..\:/Users/Amanda Maschio/AndroidStudioProjects/SportScheduleApp/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" value="0.1125" />
         <entry key="..\:/Users/Leonardo-NB/Documents/Android Studio/sport-schedule-app/app/src/main/res/layout/activity_main.xml" value="0.27291666666666664" />
-        <entry key="..\:/Users/Leonardo-NB/Documents/Android Studio/sport-schedule-app/app/src/main/res/layout/activity_splash.xml" value="0.27291666666666664" />
         <entry key="..\:/Users/Leonardo-NB/Documents/Android Studio/sport-schedule-app/app/src/main/res/layout/login.xml" value="0.27291666666666664" />
-        <entry key="..\:/Users/gusta/AndroidStudioProjects/sport-schedule-app/app/src/main/res/drawable/outline_account_circle_24.xml" value="0.3828125" />
         <entry key="..\:/Users/gusta/AndroidStudioProjects/sport-schedule-app/app/src/main/res/layout/activity_bem_vindo.xml" value="0.36666666666666664" />
-        <entry key="..\:/Users/gusta/AndroidStudioProjects/sport-schedule-app/app/src/main/res/layout/activity_cad_item.xml" value="0.2028985507246377" />
-        <entry key="..\:/Users/gusta/AndroidStudioProjects/sport-schedule-app/app/src/main/res/layout/activity_cad_quadra_2.xml" value="0.2028985507246377" />
-        <entry key="..\:/Users/gusta/AndroidStudioProjects/sport-schedule-app/app/src/main/res/layout/activity_cad_quadra_3.xml" value="0.2028985507246377" />
-        <entry key="..\:/Users/gusta/AndroidStudioProjects/sport-schedule-app/app/src/main/res/layout/activity_layout_lista.xml" value="0.2028985507246377" />
-        <entry key="..\:/Users/gusta/AndroidStudioProjects/sport-schedule-app/app/src/main/res/layout/activity_login.xml" value="0.36666666666666664" />
-        <entry key="..\:/Users/gusta/AndroidStudioProjects/sport-schedule-app/app/src/main/res/layout/activity_quadra_info.xml" value="0.3641304347826087" />
-        <entry key="..\:/Users/gusta/AndroidStudioProjects/sport-schedule-app/app/src/main/res/layout/activity_quadra_reserva.xml" value="0.3641304347826087" />
-        <entry key="..\:/Users/gusta/AndroidStudioProjects/sport-schedule-app/app/src/main/res/layout/activity_tela_inicial_locatario.xml" value="0.3641304347826087" />
       </map>
     </option>
   </component>
@@ -32,5 +31,12 @@
   </component>
   <component name="ProjectType">
     <option name="id" value="Android" />
+  </component>
+  <component name="VisualizationToolProject">
+    <option name="state">
+      <ProjectState>
+        <option name="scale" value="0.67" />
+      </ProjectState>
+    </option>
   </component>
 </project>

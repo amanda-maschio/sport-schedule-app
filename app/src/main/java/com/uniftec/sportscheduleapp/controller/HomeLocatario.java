@@ -1,10 +1,12 @@
-package com.uniftec.sportscheduleapp;
+package com.uniftec.sportscheduleapp.controller;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 
-public class tela_inicial_locatario extends AppCompatActivity {
+import com.uniftec.sportscheduleapp.R;
+
+public class HomeLocatario extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
