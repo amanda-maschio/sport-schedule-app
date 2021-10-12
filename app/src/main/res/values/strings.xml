@@ -1,3 +1,23 @@
 <resources>
     <string name="app_name">SportScheduleApp</string>
+    <string-array name="lista_modalidade">
+        <item>Escolha uma modalidade</item>
+        <item>Futsal</item>
+        <item>Handebol</item>
+    </string-array>
+    <string-array name="lista_data">
+        <item>Escolha uma data</item>
+        <item>12 out 2021</item>
+        <item>13 out 2021</item>
+    </string-array>
+    <string-array name="lista_horario">
+        <item>Escolha um horário</item>
+        <item>12:00</item>
+        <item>13:00</item>
+    </string-array>
+    <string-array name="lista_itens">
+        <item>Escolha um item</item>
+        <item>Bolas de Futsal</item>
+        <item>Cones de PVC</item>
+    </string-array>
 </resources>
