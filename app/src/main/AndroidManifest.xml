@@ -15,13 +15,8 @@
             android:exported="true" />
         <activity
             android:name=".controller.Splash"
-            android:exported="true">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
+            android:exported="true"/>
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
         <activity
             android:name=".controller.BemVindo"
             android:exported="true"
@@ -55,17 +50,21 @@
             android:exported="true"
             android:theme="@style/Theme.AppCompat.NoActionBar" />
         <activity
-            android:name=".controller.QuadraInfo"
+            android:name=".controller.Reserva"
             android:exported="true"
-            android:theme="@style/Theme.AppCompat.NoActionBar" />
-        <activity
-            android:name=".controller.QuadraReserva"
-            android:exported="true"
-            android:theme="@style/Theme.AppCompat.NoActionBar" />
+            android:theme="@style/Theme.AppCompat.NoActionBar">
+
+        <intent-filter>
+            <action android:name="android.intent.action.MAIN" />
+
+            <category android:name="android.intent.category.LAUNCHER" />
+        </intent-filter>
+        </activity>
         <activity
             android:name=".controller.HomeLocatario"
             android:exported="true"
-            android:theme="@style/Theme.AppCompat.NoActionBar"></activity>
+            android:theme="@style/Theme.AppCompat.NoActionBar"/>
+
     </application>
 
 </manifest>

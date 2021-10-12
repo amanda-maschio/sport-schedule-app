@@ -6,11 +6,11 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.uniftec.sportscheduleapp.R;
 
-public class QuadraInfo extends AppCompatActivity {
+public class Reserva extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_quadra_info);
+        setContentView(R.layout.activity_reserva);
     }
 }
