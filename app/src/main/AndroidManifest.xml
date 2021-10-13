@@ -66,6 +66,14 @@
             android:name=".controller.HomeLocatario"
             android:exported="true"
             android:theme="@style/Theme.AppCompat.NoActionBar"></activity>
+        <activity
+            android:name=".controller.HomeLocador"
+            android:exported="true"
+            android:theme="@style/Theme.AppCompat.NoActionBar"></activity>
+        <activity
+            android:name=".controller.Perfil"
+            android:exported="true"
+            android:theme="@style/Theme.AppCompat.NoActionBar"></activity>
     </application>
 
 </manifest>
