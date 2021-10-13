@@ -73,7 +73,7 @@
             android:ems="10"
             android:hint="CPF"
             android:importantForAutofill="no"
-            android:inputType="textPassword"
+            android:inputType="number"
             tools:targetApi="o" />
     </com.google.android.material.textfield.TextInputLayout>
 
@@ -96,7 +96,7 @@
             android:ems="10"
             android:hint="Nome"
             android:importantForAutofill="no"
-            android:inputType="textPassword"
+            android:inputType="textPersonName"
             tools:targetApi="o" />
     </com.google.android.material.textfield.TextInputLayout>
 
@@ -118,7 +118,7 @@
             android:ems="10"
             android:hint="Data de Nascimento"
             android:importantForAutofill="no"
-            android:inputType="textPassword"
+            android:inputType="date"
             tools:targetApi="o" />
     </com.google.android.material.textfield.TextInputLayout>
 
@@ -166,11 +166,12 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="24dp"
         android:layout_marginEnd="24dp"
-        android:backgroundTint="#2E3145"
+        android:backgroundTint="#2e2e44"
         android:text="Cadastrar"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/discordo" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
