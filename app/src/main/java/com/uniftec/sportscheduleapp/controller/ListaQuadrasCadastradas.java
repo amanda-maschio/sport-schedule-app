@@ -1,16 +1,16 @@
 package com.uniftec.sportscheduleapp.controller;
 
-import android.os.Bundle;
-
 import androidx.appcompat.app.AppCompatActivity;
+
+import android.os.Bundle;
 
 import com.uniftec.sportscheduleapp.R;
 
-public class QuadraInfo extends AppCompatActivity {
+public class ListaQuadrasCadastradas extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_quadra_info);
+        setContentView(R.layout.activity_lista_quadras_cadastradas);
     }
 }

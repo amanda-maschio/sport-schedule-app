@@ -4,8 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#2E3145"
-    android:backgroundTint="#2E3145"
+    android:background="#2e2e44"
+    android:backgroundTint="#2e2e44"
     tools:context=".controller.HomeLocatario">
 
     <ImageView
@@ -39,7 +39,7 @@
 
             <androidx.constraintlayout.widget.ConstraintLayout
 
-                android:id="@+id/constraintLayout5"
+                android:id="@+id/btajuda"
                 android:layout_width="112dp"
                 android:layout_height="109dp"
                 android:layout_weight="2"
@@ -53,7 +53,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Ajuda"
-                    android:textColor="#2E3145"
+                    android:textColor="#2e2e44"
                     android:textStyle="bold"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
@@ -89,7 +89,7 @@
                     android:layout_height="wrap_content"
                     android:gravity="center"
                     android:text="Minhas \nReservas"
-                    android:textColor="#2E3145"
+                    android:textColor="#2e2e44"
                     android:textStyle="bold"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
@@ -133,7 +133,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Nova Reserva"
-                    android:textColor="#2E3145"
+                    android:textColor="#2e2e44"
                     android:textStyle="bold"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
@@ -167,7 +167,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Meu Perfil"
-                    android:textColor="#2E3145"
+                    android:textColor="#2e2e44"
                     android:textStyle="bold"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"

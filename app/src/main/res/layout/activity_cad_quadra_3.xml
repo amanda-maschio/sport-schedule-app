@@ -116,7 +116,7 @@
         android:id="@+id/btnConcluir"
         android:layout_width="150dp"
         android:layout_height="45dp"
-        android:backgroundTint="#2E3145"
+        android:backgroundTint="#2e2e44"
         android:text="Concluir"
         android:textSize="11dp"
         app:layout_constraintBottom_toBottomOf="parent"

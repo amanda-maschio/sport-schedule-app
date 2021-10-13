@@ -17,6 +17,7 @@ public class Login extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
 
+        Button botaoEntrar = (Button) findViewById(R.id.btEntrar);
         Button botaoCadastrarse = (Button) findViewById(R.id.btCadastrarse);
 
         botaoCadastrarse.setOnClickListener(new View.OnClickListener() {
@@ -28,5 +29,16 @@ public class Login extends AppCompatActivity {
 
             }
         });
+
+        botaoEntrar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                Intent chamaHomeLocatario = new Intent(Login.this, HomeLocatario.class);
+                startActivity(chamaHomeLocatario);
+
+            }
+        });
+
     }
 }
