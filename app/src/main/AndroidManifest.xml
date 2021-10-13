@@ -11,11 +11,6 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.SportScheduleApp">
         <activity
-            android:name=".controller.ListaQuadrasCadastradas"
-            android:exported="true"
-            android:label="@string/title_activity_lista_quadras_cadastradas"
-            android:theme="@style/Theme.SportScheduleApp.NoActionBar" />
-        <activity
             android:name=".controller.cadastroLocatario"
             android:exported="true" />
         <activity
@@ -70,12 +65,7 @@
         <activity
             android:name=".controller.HomeLocatario"
             android:exported="true"
-            android:theme="@style/Theme.AppCompat.NoActionBar" />
-        <activity android:name ="com.uniftec.sportscheduleapp.controller.LayoutListaQuadras"
-            android:exported="true"
-            />
-
+            android:theme="@style/Theme.AppCompat.NoActionBar"></activity>
     </application>
 
 </manifest>
-
