@@ -84,7 +84,6 @@
                 android:background="@drawable/canto_redondo"
                 android:backgroundTint="#FFFFFF"
                 android:clickable="true"
-                android:onClick="btnAjuda"
                 tools:ignore="MissingConstraints">
 
                 <TextView
@@ -131,7 +130,6 @@
                 android:backgroundTint="#FFFFFF"
                 android:onClick="openCadastroQuadra"
                 android:clickable="true"
-                android:onClick="btnQuadras"
                 tools:ignore="MissingConstraints">
 
                 <TextView
@@ -168,7 +166,6 @@
                 android:backgroundTint="#FFFFFF"
                 android:onClick="openMeuPerfil"
                 android:clickable="true"
-                android:onClick="btnPerfil"
                 tools:ignore="MissingConstraints">
 
                 <TextView
