@@ -38,5 +38,4 @@ public class CadastroQuadra3 extends AppCompatActivity {
         return new Quadra();
     }
 
-
 }
