@@ -23,7 +23,7 @@ public class BemVindo extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
-                Intent chamaCadastroLocatario = new Intent(BemVindo.this, cadastroLocatario.class);
+                Intent chamaCadastroLocatario = new Intent(BemVindo.this, CadastroLocatario.class);
                 startActivity(chamaCadastroLocatario);
 
             }
@@ -33,7 +33,7 @@ public class BemVindo extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
-                Intent chamaCadastroLocador = new Intent(BemVindo.this, cadastroLocador.class);
+                Intent chamaCadastroLocador = new Intent(BemVindo.this, CadastroLocador.class);
                 startActivity(chamaCadastroLocador);
 
             }

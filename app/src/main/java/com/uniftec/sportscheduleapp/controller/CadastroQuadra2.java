@@ -34,7 +34,7 @@ public class CadastroQuadra2 extends AppCompatActivity {
 
     public void botaoCadastroItem(View v) {
         Intent telaItem = new Intent(this, CadastroItem.class);
-        startActivityForResult(telaItem, 2);
+        startActivity(telaItem);
     }
 
     public void onActivityResult(int requestCode, int resultCode, Intent data) {
@@ -60,7 +60,7 @@ public class CadastroQuadra2 extends AppCompatActivity {
 
     public void botaoProximoImagens (View v){
         Intent telaImagens = new Intent(this, CadastroQuadra3.class);
-        startActivityForResult(telaImagens, 4);
+        startActivity(telaImagens);
     }
 
 }

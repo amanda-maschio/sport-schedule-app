@@ -12,10 +12,9 @@
         android:theme="@style/Theme.SportScheduleApp">
         <activity
             android:name=".controller.ListaQuadrasCadastradas"
-            android:exported="true" />
-        <activity
-            android:name=".controller.cadastroLocatario"
-            android:exported="true" />
+            android:label="Minhas Quadras"
+            android:exported="true"
+            android:parentActivityName=".controller.HomeLocador" />
         <activity
             android:name=".controller.Splash"
             android:exported="true">
@@ -36,7 +35,7 @@
             android:name=".controller.CadastroQuadra1"
             android:exported="true"
             android:label="Cadastro da Quadra"
-            android:parentActivityName=".controller.Login" />
+            android:parentActivityName=".controller.HomeLocador" />
         <activity
             android:name=".controller.CadastroQuadra2"
             android:exported="true"
@@ -58,37 +57,31 @@
             android:exported="true"
             android:theme="@style/Theme.AppCompat.NoActionBar" />
         <activity
-            android:name=".controller.QuadraInfo"
-            android:exported="true"
-            android:theme="@style/Theme.AppCompat.NoActionBar" />
-        <activity
-            android:name=".controller.QuadraReserva"
-            android:exported="true"
-            android:theme="@style/Theme.AppCompat.NoActionBar" />
-        <activity
             android:name=".controller.HomeLocatario"
             android:exported="true"
-            android:theme="@style/Theme.AppCompat.NoActionBar"></activity>
+            android:theme="@style/Theme.AppCompat.NoActionBar"/>
         <activity
             android:name=".controller.HomeLocador"
             android:exported="true"
-            android:theme="@style/Theme.AppCompat.NoActionBar"></activity>
+            android:theme="@style/Theme.AppCompat.NoActionBar"/>
         <activity
             android:name=".controller.Perfil"
             android:exported="true"
-            android:theme="@style/Theme.AppCompat.NoActionBar"></activity>
+            android:theme="@style/Theme.AppCompat.NoActionBar"/>
         <activity
-            android:name=".controller.escolhaPerfil"
-            android:exported="true"
-            android:theme="@style/Theme.AppCompat.NoActionBar"></activity>
+            android:name=".controller.CadastroLocador"
+            android:label="Cadastro"
+            android:parentActivityName=".controller.BemVindo"
+            android:exported="true"/>
         <activity
-            android:name=".controller.cadastroLocador"
-            android:exported="true"
-            android:theme="@style/Theme.AppCompat.NoActionBar"></activity>
+            android:name=".controller.CadastroLocatario"
+            android:label="Cadastro"
+            android:parentActivityName=".controller.BemVindo"
+            android:exported="true" />
         <activity
             android:name=".controller.Quadra"
             android:exported="true"
-            android:theme="@style/Theme.AppCompat.NoActionBar"></activity>
+            android:theme="@style/Theme.AppCompat.NoActionBar"/>
     </application>
 
 </manifest>

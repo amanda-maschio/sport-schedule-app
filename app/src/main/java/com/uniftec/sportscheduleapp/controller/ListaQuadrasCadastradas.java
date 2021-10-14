@@ -41,7 +41,7 @@ public class ListaQuadrasCadastradas extends AppCompatActivity {
             public void onClick(View view) {
 
                 Intent chamaAdicionarQuadras = new Intent(ListaQuadrasCadastradas.this, CadastroQuadra1.class);
-                startActivityForResult(chamaAdicionarQuadras, 2);
+                startActivity(chamaAdicionarQuadras);
 
             }
         });

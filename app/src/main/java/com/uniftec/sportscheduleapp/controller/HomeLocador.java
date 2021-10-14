@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.constraintlayout.widget.ConstraintLayout;
 
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -17,16 +18,25 @@ public class HomeLocador extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_tela_inicial_locador);
 
-        ConstraintLayout quadras = findViewById(R.id.btQuadra);
+    }
 
-        quadras.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
+    public void openSiteAjuda(View v) {
+        Intent irFtec = new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.ftec.com.br"));
+        startActivity(irFtec);
+    }
 
-                Intent chamaListaQuadrasCadastradas = new Intent(HomeLocador.this, ListaQuadrasCadastradas.class);
-                startActivity(chamaListaQuadrasCadastradas);
+    public void openCadastroQuadra(View v) {
+        Intent telaCadastroQuadra = new Intent(this, CadastroQuadra1.class);
+        startActivity(telaCadastroQuadra);
+    }
 
-            }
-        });
+    public void openTelaListaQuadras(View v) {
+        Intent telaListaQuadras = new Intent(this, ListaQuadrasCadastradas.class);
+        startActivity(telaListaQuadras);
+    }
+
+    public void openMeuPerfil(View v) {
+        Intent telaPerfil = new Intent(this, Perfil.class);
+        startActivity(telaPerfil);
     }
 }

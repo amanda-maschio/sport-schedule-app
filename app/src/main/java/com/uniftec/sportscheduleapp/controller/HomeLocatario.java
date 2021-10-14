@@ -15,23 +15,25 @@ import com.uniftec.sportscheduleapp.R;
 
 public class HomeLocatario extends AppCompatActivity {
 
-
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_tela_inicial_locatario);
 
+    }
 
-        ConstraintLayout botaoAjuda = findViewById(R.id.btajuda);
+    public void openSiteAjuda(View v) {
+        Intent irFtec = new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.ftec.com.br"));
+        startActivity(irFtec);
+    }
 
-        botaoAjuda.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent irFtec = new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.ftec.com.br"));
-                startActivity(irFtec);
-            }
-        });
+    public void openTelaLocalizarQuadras(View v) {
+        Intent telaLocalizarQuadra = new Intent(this, LocalizaQuadra.class);
+        startActivity(telaLocalizarQuadra);
+    }
 
+    public void openMeuPerfil(View v) {
+        Intent telaPerfil = new Intent(this, Perfil.class);
+        startActivity(telaPerfil);
     }
 }
