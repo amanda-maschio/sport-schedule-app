@@ -66,6 +66,7 @@
                     android:layout_width="66dp"
                     android:layout_height="63dp"
                     android:layout_marginTop="12dp"
+                    android:onClick="btnReservas"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
@@ -81,6 +82,7 @@
                 android:background="@drawable/canto_redondo"
                 android:backgroundTint="#FFFFFF"
                 android:clickable="true"
+                android:onClick="btnAjuda"
                 tools:ignore="MissingConstraints">
 
                 <TextView
@@ -126,6 +128,7 @@
                 android:background="@drawable/canto_redondo"
                 android:backgroundTint="#FFFFFF"
                 android:clickable="true"
+                android:onClick="btnQuadras"
                 tools:ignore="MissingConstraints">
 
                 <TextView
@@ -160,6 +163,7 @@
                 android:background="@drawable/canto_redondo"
                 android:backgroundTint="#FFFFFF"
                 android:clickable="true"
+                android:onClick="btnPerfil"
                 tools:ignore="MissingConstraints">
 
                 <TextView

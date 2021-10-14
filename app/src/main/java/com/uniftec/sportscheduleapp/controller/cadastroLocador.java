@@ -1,6 +1,8 @@
 package com.uniftec.sportscheduleapp.controller;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -12,5 +14,10 @@ public class cadastroLocador extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_cadastro_locador);
+    }
+
+    public void btnConcluirCadastroLocador(View v){
+        Intent intent = new Intent(this, HomeLocador.class);
+        startActivity(intent);
     }
 }

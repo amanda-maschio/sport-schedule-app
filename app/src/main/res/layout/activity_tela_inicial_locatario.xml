@@ -46,6 +46,7 @@
                 android:background="@drawable/canto_redondo"
                 android:backgroundTint="#FFFFFF"
                 android:clickable="true"
+                android:onClick="btnAjuda"
                 tools:ignore="MissingConstraints">
 
                 <TextView
@@ -160,6 +161,7 @@
                 android:background="@drawable/canto_redondo"
                 android:backgroundTint="#FFFFFF"
                 android:clickable="true"
+                android:onClick="btnPerfil"
                 tools:ignore="MissingConstraints">
 
                 <TextView

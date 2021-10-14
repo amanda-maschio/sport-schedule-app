@@ -7,13 +7,14 @@
     android:background="#E8E6E6">
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/btnMinhasQuadras"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="30dp"
         android:backgroundTint="#C5BFBF"
         android:gravity="left"
         android:text="MINHAS QUADRAS"
+        android:onClick="btnMinhasQuadras"
         android:textColor="@color/black"
         app:layout_constraintTop_toBottomOf="@+id/textView10" />
 
@@ -24,8 +25,9 @@
         android:backgroundTint="#C5BFBF"
         android:gravity="left"
         android:text="CADASTRAR QUADRA"
+        android:onClick="btnCadastrarQuadra"
         android:textColor="@color/black"
-        app:layout_constraintTop_toBottomOf="@+id/button"
+        app:layout_constraintTop_toBottomOf="@+id/btnMinhasQuadras"
         tools:layout_editor_absoluteX="171dp" />
 
     <TextView
