@@ -58,10 +58,6 @@
             android:exported="true"
             android:theme="@style/Theme.AppCompat.NoActionBar" />
         <activity
-            android:name=".controller.QuadraInfo"
-            android:exported="true"
-            android:theme="@style/Theme.AppCompat.NoActionBar" />
-        <activity
             android:name=".controller.Reserva"
             android:exported="true"
             android:theme="@style/Theme.AppCompat.NoActionBar" />
