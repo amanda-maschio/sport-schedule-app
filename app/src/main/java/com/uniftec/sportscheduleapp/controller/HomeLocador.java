@@ -10,6 +10,7 @@ import android.view.View;
 import android.widget.Button;
 
 import com.uniftec.sportscheduleapp.R;
+import com.uniftec.sportscheduleapp.entities.Quadra;
 
 public class HomeLocador extends AppCompatActivity {
 
@@ -25,9 +26,22 @@ public class HomeLocador extends AppCompatActivity {
         startActivity(irFtec);
     }
 
+    public void onActivityResult(int requestCode, int resultCode, Intent data) {
+
+        if (requestCode == 2) {
+            if (resultCode == 1) {
+                Quadra quadra = ((Quadra) data.getSerializableExtra("quadra"));
+                Intent telaListaQuadras = new Intent(this, ListaQuadrasCadastradas.class);
+                telaListaQuadras.putExtra("quadra", quadra );
+                startActivity(telaListaQuadras);
+            }
+        }
+        super.onActivityResult(requestCode, resultCode, data);
+    }
+
     public void openCadastroQuadra(View v) {
-        Intent telaCadastroQuadra = new Intent(this, CadastroQuadra1.class);
-        startActivity(telaCadastroQuadra);
+        Intent chamaAdicionarQuadras = new Intent(HomeLocador.this, CadastroQuadra1.class);
+        startActivityForResult(chamaAdicionarQuadras, 2);
     }
 
     public void openTelaListaQuadras(View v) {

@@ -87,7 +87,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.060000002">
+        app:layout_constraintVertical_bias="0.01999998">
 
         <EditText
             android:id="@+id/txtNome"
@@ -128,10 +128,10 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="24dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="8dp"
         android:layout_marginEnd="24dp"
         android:text="Termos de Contrato"
-        android:textSize="18dp"
+        android:textSize="15dp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
@@ -141,7 +141,7 @@
     <CheckBox
         android:id="@+id/concordo"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="25dp"
         android:layout_marginStart="24dp"
         android:layout_marginEnd="24dp"
         android:text="Li e Concordo"
@@ -152,11 +152,12 @@
     <CheckBox
         android:id="@+id/discordo"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
         android:layout_marginStart="24dp"
+        android:layout_height="25dp"
         android:layout_marginEnd="24dp"
         android:text="Discordo"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/concordo" />
 
@@ -167,12 +168,13 @@
         android:layout_marginStart="24dp"
         android:layout_marginEnd="24dp"
         android:backgroundTint="#2e2e44"
-        android:text="Cadastrar"
         android:onClick="openTelaInicialLocatario"
+        android:text="Cadastrar"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/discordo" />
+        app:layout_constraintTop_toBottomOf="@+id/discordo"
+        app:layout_constraintVertical_bias="0.13999999" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
