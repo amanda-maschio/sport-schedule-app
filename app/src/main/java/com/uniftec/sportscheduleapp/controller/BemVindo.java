@@ -27,7 +27,10 @@ public class BemVindo extends AppCompatActivity {
 
             }
         });
+    }
 
-
+    public void btnLocador(View v){
+        Intent intent = new Intent(this, cadastroLocador.class);
+        startActivity(intent);
     }
 }

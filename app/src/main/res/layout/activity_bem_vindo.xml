@@ -73,6 +73,7 @@
         android:backgroundTint="#2e2e44"
         android:text="Locador"
         android:textSize="11dp"
+        android:onClick="btnLocador"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
