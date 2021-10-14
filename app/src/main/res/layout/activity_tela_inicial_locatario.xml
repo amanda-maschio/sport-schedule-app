@@ -47,6 +47,7 @@
                 android:backgroundTint="#FFFFFF"
                 android:onClick="openSiteAjuda"
                 android:clickable="true"
+                android:onClick="btnAjuda"
                 tools:ignore="MissingConstraints">
 
                 <TextView
@@ -163,6 +164,7 @@
                 android:backgroundTint="#FFFFFF"
                 android:onClick="openMeuPerfil"
                 android:clickable="true"
+                android:onClick="btnPerfil"
                 tools:ignore="MissingConstraints">
 
                 <TextView
