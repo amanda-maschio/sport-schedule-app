@@ -47,7 +47,7 @@
         android:layout_marginTop="10dp"
         android:layout_marginEnd="16dp"
         android:gravity="center"
-        android:text="Faça reservas ou alugue quadras de maneira fácil e rápida utilizando nosso app. Para começar, selecione o seu perfil."
+        android:text="Faça reservas ou alugue quadras de maneira fácil e rápida utilizando nosso app. \n\nPara começar, selecione o seu perfil."
         android:textColor="@android:color/darker_gray"
         android:textSize="12dp"
         app:layout_constraintEnd_toEndOf="parent"
