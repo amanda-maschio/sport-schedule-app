@@ -11,50 +11,50 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.uniftec.sportscheduleapp.R;
 import com.uniftec.sportscheduleapp.entities.Item;
+import com.uniftec.sportscheduleapp.entities.Quadra;
 
 import java.util.List;
 
 public class AdapterListQuadras extends RecyclerView.Adapter<AdapterListQuadras.bucketQuadra> {
 
-    protected List<Item> items;
+    protected List<Quadra> quadras;
 
-    public AdapterListQuadras(List<Item> items) {
-        this.items = items;
+    public AdapterListQuadras(List<Quadra> quadras) {
+        this.quadras = quadras;
     }
 
     @NonNull
     @Override
     public AdapterListQuadras.bucketQuadra onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         LayoutInflater layoutInflater = LayoutInflater.from(parent.getContext());
-        View view = layoutInflater.inflate(R.layout.activity_layout_lista, parent, false);
+        View view = layoutInflater.inflate(R.layout.activity_layout_lista_quadras, parent, false);
         return new AdapterListQuadras.bucketQuadra(view);
     }
 
     @Override
     public void onBindViewHolder(@NonNull AdapterListQuadras.bucketQuadra holder, int position) {
-        holder.fill((Item) items.toArray()[position]);
+        holder.fill((Quadra) quadras.toArray()[position]);
     }
 
     @Override
     public int getItemCount() {
-        return items.size();
+        return quadras.size();
     }
 
     public static class bucketQuadra extends RecyclerView.ViewHolder {
 
         private TextView nomeQuadra;
         private TextView localQuadra;
-        private ImageView imageQuadra;
 
         public bucketQuadra(@NonNull View itemView) {
             super(itemView);
-            nomeQuadra = itemView.findViewById(R.id.txtNome);
-            localQuadra = itemView.findViewById(R.id.txtValor);
+            nomeQuadra = itemView.findViewById(R.id.nomequadra);
+            localQuadra = itemView.findViewById(R.id.endereco);
         }
 
-        public void fill(Item data) {
-            nomeQuadra.setText(data.getNome());
-            localQuadra.setText(data.getValor());
+        public void fill(Quadra data) {
+            nomeQuadra.setText(data.getNomeQuadra());
+            localQuadra.setText(data.getRua()+", "+data.getBairro()+", "+data.getCEP());
         }
 
     }

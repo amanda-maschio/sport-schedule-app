@@ -10,6 +10,7 @@ import android.view.View;
 
 import com.uniftec.sportscheduleapp.R;
 import com.uniftec.sportscheduleapp.entities.Item;
+import com.uniftec.sportscheduleapp.entities.Quadra;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -44,12 +45,22 @@ public class CadastroQuadra2 extends AppCompatActivity {
                 adaptador.notifyDataSetChanged();
             }
         }
+
+        if (requestCode == 4) {
+            if (resultCode == 1) {
+                Quadra quadra = (Quadra) data.getSerializableExtra("quadra");
+                Intent resultado = new Intent();
+                resultado.putExtra("quadra", quadra);
+                setResult(1, resultado);
+                finish();
+            }
+        }
         super.onActivityResult(requestCode, resultCode, data);
     }
 
     public void botaoProximoImagens (View v){
         Intent telaImagens = new Intent(this, CadastroQuadra3.class);
-        startActivity(telaImagens);
+        startActivityForResult(telaImagens, 4);
     }
 
 }

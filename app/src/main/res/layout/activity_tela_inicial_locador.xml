@@ -52,7 +52,7 @@
                     android:id="@+id/ajuda3"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Reserva"
+                    android:text="Reservas"
                     android:textColor="#2E3145"
                     android:textStyle="bold"
                     app:layout_constraintBottom_toBottomOf="parent"
@@ -120,7 +120,7 @@
             tools:ignore="MissingConstraints">
 
             <androidx.constraintlayout.widget.ConstraintLayout
-                android:id="@+id/constraintLayout2"
+                android:id="@+id/btQuadra"
                 android:layout_width="112dp"
                 android:layout_height="109dp"
                 android:background="@drawable/canto_redondo"
@@ -144,7 +144,7 @@
                 <ImageView
                     android:id="@+id/imageViewQuadras"
                     android:layout_width="66dp"
-                    android:layout_height="63dp"
+                    android:layout_height="65dp"
                     android:layout_marginTop="12dp"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"

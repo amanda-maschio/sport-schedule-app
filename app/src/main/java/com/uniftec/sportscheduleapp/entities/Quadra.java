@@ -3,12 +3,15 @@ package com.uniftec.sportscheduleapp.entities;
 import android.media.Image;
 import android.widget.CheckBox;
 
-public class Quadra {
+import java.io.Serializable;
+
+public class Quadra implements Serializable {
 
     private String nomeQuadra;
-    private String local;
-    private Image imagens;
-    private CheckBox diasDisponíveis;
+    private String rua;
+    private String bairro;
+    private String cidade;
+    private String CEP;
 
     public String getNomeQuadra() {
         return nomeQuadra;
@@ -18,27 +21,36 @@ public class Quadra {
         this.nomeQuadra = nomeQuadra;
     }
 
-    public String getLocal() {
-        return local;
+
+    public String getRua() {
+        return rua;
     }
 
-    public void setLocal(String local) {
-        this.local = local;
+    public void setRua(String rua) {
+        this.rua = rua;
     }
 
-    public Image getImagens() {
-        return imagens;
+    public String getBairro() {
+        return bairro;
     }
 
-    public void setImagens(Image imagens) {
-        this.imagens = imagens;
+    public void setBairro(String bairro) {
+        this.bairro = bairro;
     }
 
-    public CheckBox getDiasDisponíveis() {
-        return diasDisponíveis;
+    public String getCidade() {
+        return cidade;
     }
 
-    public void setDiasDisponíveis(CheckBox diasDisponíveis) {
-        this.diasDisponíveis = diasDisponíveis;
+    public void setCidade(String cidade) {
+        this.cidade = cidade;
+    }
+
+    public String getCEP() {
+        return CEP;
+    }
+
+    public void setCEP(String CEP) {
+        this.CEP = CEP;
     }
 }

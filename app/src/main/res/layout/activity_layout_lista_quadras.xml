@@ -4,16 +4,17 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:background="#FFFFFF"
     android:backgroundTint="#FFFFFF"
-    android:orientation="vertical"
-    tools:context=".controller.LayoutListaQuadras">
+    android:layout_margin="16dp"
+    android:background="@drawable/canto_redondo"
+    android:translationZ="2dp"
+    android:orientation="vertical">
 
     <ImageView
         android:id="@+id/imagemquadracadastrada"
         android:layout_width="match_parent"
         android:layout_height="164dp"
-        tools:srcCompat="@tools:sample/avatars" />
+        tools:srcCompat="@drawable/quadra_exemplo_2" />
 
     <TextView
         android:id="@+id/nomequadra"
@@ -26,7 +27,7 @@
         android:textStyle="bold" />
 
     <TextView
-        android:id="@+id/endereço"
+        android:id="@+id/endereco"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="5dp"

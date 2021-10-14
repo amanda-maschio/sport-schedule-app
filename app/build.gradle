@@ -6,6 +6,7 @@ android {
     compileSdk 31
 
     defaultConfig {
+        vectorDrawables.useSupportLibrary = true
         applicationId "com.uniftec.sportscheduleapp"
         minSdk 21
         targetSdk 31

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    package="com.uniftec.sportscheduleapp">
+    package="com.uniftec.sportscheduleapp" >
 
     <application
         android:allowBackup="true"
@@ -9,13 +9,16 @@
         android:label="Sport Schedule"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.SportScheduleApp">
+        android:theme="@style/Theme.SportScheduleApp" >
+        <activity
+            android:name=".controller.ListaQuadrasCadastradas"
+            android:exported="true" />
         <activity
             android:name=".controller.cadastroLocatario"
             android:exported="true" />
         <activity
             android:name=".controller.Splash"
-            android:exported="true">
+            android:exported="true" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -54,7 +57,8 @@
             android:name=".controller.LocalizaQuadra"
             android:exported="true"
             android:theme="@style/Theme.AppCompat.NoActionBar" />
-        <activity
+        <!--
+ <activity
             android:name=".controller.QuadraInfo"
             android:exported="true"
             android:theme="@style/Theme.AppCompat.NoActionBar" />
@@ -62,18 +66,19 @@
             android:name=".controller.QuadraReserva"
             android:exported="true"
             android:theme="@style/Theme.AppCompat.NoActionBar" />
+        -->
         <activity
             android:name=".controller.HomeLocatario"
             android:exported="true"
-            android:theme="@style/Theme.AppCompat.NoActionBar"></activity>
+            android:theme="@style/Theme.AppCompat.NoActionBar" />
         <activity
             android:name=".controller.HomeLocador"
             android:exported="true"
-            android:theme="@style/Theme.AppCompat.NoActionBar"></activity>
+            android:theme="@style/Theme.AppCompat.NoActionBar" />
         <activity
             android:name=".controller.Perfil"
             android:exported="true"
-            android:theme="@style/Theme.AppCompat.NoActionBar"></activity>
+            android:theme="@style/Theme.AppCompat.NoActionBar" />
     </application>
 
 </manifest>
