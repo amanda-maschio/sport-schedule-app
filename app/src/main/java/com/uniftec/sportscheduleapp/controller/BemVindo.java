@@ -17,6 +17,7 @@ public class BemVindo extends AppCompatActivity {
         setContentView(R.layout.activity_bem_vindo);
 
         Button botaoLocatario = (Button) findViewById(R.id.btnLocatario);
+        Button botaoLocador = (Button) findViewById(R.id.btnLocador);
 
         botaoLocatario.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -27,10 +28,17 @@ public class BemVindo extends AppCompatActivity {
 
             }
         });
-    }
 
-    public void btnLocador(View v){
-        Intent intent = new Intent(this, cadastroLocador.class);
-        startActivity(intent);
+        botaoLocador.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                Intent chamaCadastroLocador = new Intent(BemVindo.this, cadastroLocador.class);
+                startActivity(chamaCadastroLocador);
+
+            }
+        });
+
+
     }
 }
