@@ -82,6 +82,10 @@
             android:name=".controller.Quadra"
             android:exported="true"
             android:theme="@style/Theme.AppCompat.NoActionBar"/>
+        <activity
+            android:name=".controller.Reserva"
+            android:exported="true"
+            android:theme="@style/Theme.AppCompat.NoActionBar"/>
     </application>
 
 </manifest>
