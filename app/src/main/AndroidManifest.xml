@@ -74,6 +74,14 @@
             android:name=".controller.Perfil"
             android:exported="true"
             android:theme="@style/Theme.AppCompat.NoActionBar"></activity>
+        <activity
+            android:name=".controller.escolhaPerfil"
+            android:exported="true"
+            android:theme="@style/Theme.AppCompat.NoActionBar"></activity>
+        <activity
+            android:name=".controller.cadastroLocador"
+            android:exported="true"
+            android:theme="@style/Theme.AppCompat.NoActionBar"></activity>
     </application>
 
 </manifest>
