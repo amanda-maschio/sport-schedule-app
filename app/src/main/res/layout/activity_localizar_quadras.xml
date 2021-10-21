@@ -22,39 +22,6 @@
     </SearchView>
 
     <LinearLayout
-        android:id="@+id/llFilters"
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:background="#DDDCDC"
-        android:orientation="horizontal"
-        app:layout_constraintTop_toBottomOf="@+id/svLocalizarQuadra"
-        tools:layout_editor_absoluteX="320dp">
-
-        <Switch
-            android:id="@+id/switch1"
-            android:layout_width="1dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:textSize="10dp"
-            android:text="LOCALIZAÇÃO"
-            android:textColor="@color/white"
-            tools:ignore="UseSwitchCompatOrMaterialXml" />
-
-        <TextView
-            android:id="@+id/textView5"
-            android:layout_width="15dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:textAlignment="center"
-            android:gravity="center"
-            android:clickable="true"
-            android:text="+ Mais opções\n de busca"
-            android:textColor="@color/white"/>
-
-
-    </LinearLayout>
-
-    <LinearLayout
         android:layout_width="318dp"
         android:layout_height="fill_parent"
         app:layout_constraintEnd_toEndOf="parent"
