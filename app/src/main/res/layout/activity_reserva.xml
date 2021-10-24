@@ -17,20 +17,6 @@
         tools:layout_editor_absoluteY="-1dp"
         tools:ignore="MissingConstraints" />
 
-    <TextView
-        android:id="@+id/txtFotos"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginRight="10dp"
-        android:layout_marginBottom="170dp"
-        android:clickable="true"
-        android:text="Fotos >"
-        android:textColor="#686666"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="@+id/imgBackgroundQuadra"
-        app:layout_constraintEnd_toEndOf="@+id/imgBackgroundQuadra"
-        tools:layout_editor_absoluteX="349dp" />
-
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/llInfoQuadra"
         android:layout_width="match_parent"

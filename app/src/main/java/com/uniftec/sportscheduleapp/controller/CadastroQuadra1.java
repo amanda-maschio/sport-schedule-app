@@ -3,6 +3,7 @@ package com.uniftec.sportscheduleapp.controller;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.EditText;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -16,7 +17,7 @@ public class CadastroQuadra1 extends AppCompatActivity {
     private EditText nome;
     private EditText rua;
     private EditText bairro;
-    private EditText CEP;
+    private EditText cep;
     private EditText cidade;
     private EditText observacoes;
 
@@ -24,12 +25,16 @@ public class CadastroQuadra1 extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_cad_quadra_1);
-    }
 
-    public void botaoProximoQuadra2(View v) {
+        Button btnProximo = (Button) findViewById(R.id.btnProximo);
 
-        Intent telaQuadra2 = new Intent(this, CadastroQuadra2.class);
-        startActivityForResult(telaQuadra2, 3);
+        btnProximo.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent telaQuadra2 = new Intent(CadastroQuadra1.this, CadastroQuadra2.class);
+                startActivityForResult(telaQuadra2, 3);
+            }
+        });
     }
 
     public void onActivityResult(int requestCode, int resultCode, Intent data) {
@@ -37,7 +42,7 @@ public class CadastroQuadra1 extends AppCompatActivity {
         nome = findViewById(R.id.txtNome);
         rua = findViewById(R.id.txtRua);
         bairro = findViewById(R.id.txtBairro);
-        CEP = findViewById(R.id.txtCep);
+        cep = findViewById(R.id.txtCep);
         cidade = findViewById(R.id.txtCidade);
         observacoes = findViewById(R.id.txtObs);
 
@@ -47,7 +52,7 @@ public class CadastroQuadra1 extends AppCompatActivity {
                 quadra.setNomeQuadra(nome.getText().toString());
                 quadra.setRua(rua.getText().toString());
                 quadra.setBairro(bairro.getText().toString());
-                quadra.setCEP(CEP.getText().toString());
+                quadra.setCEP(cep.getText().toString());
                 Intent resultado = new Intent();
                 resultado.putExtra("quadra", quadra);
                 setResult(1, resultado);
@@ -56,6 +61,4 @@ public class CadastroQuadra1 extends AppCompatActivity {
         }
         super.onActivityResult(requestCode, resultCode, data);
     }
-
-
 }

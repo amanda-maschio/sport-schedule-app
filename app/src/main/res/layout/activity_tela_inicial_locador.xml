@@ -39,13 +39,12 @@
 
             <androidx.constraintlayout.widget.ConstraintLayout
 
-                android:id="@+id/constraintLayout6"
+                android:id="@+id/clMinhasQuadras"
                 android:layout_width="112dp"
                 android:layout_height="109dp"
                 android:layout_weight="2"
                 android:background="@drawable/canto_redondo"
                 android:backgroundTint="#FFFFFF"
-                android:onClick="openTelaListaQuadras"
                 android:clickable="true"
                 tools:ignore="MissingConstraints">
 
@@ -74,12 +73,11 @@
             </androidx.constraintlayout.widget.ConstraintLayout>
 
             <androidx.constraintlayout.widget.ConstraintLayout
-                android:id="@+id/constraintLayout8"
+                android:id="@+id/clAjuda"
                 android:layout_width="112dp"
                 android:layout_height="109dp"
                 android:layout_marginTop="16dp"
                 android:layout_weight="2"
-                android:onClick="openSiteAjuda"
                 android:background="@drawable/canto_redondo"
                 android:backgroundTint="#FFFFFF"
                 android:clickable="true"
@@ -122,12 +120,11 @@
             tools:ignore="MissingConstraints">
 
             <androidx.constraintlayout.widget.ConstraintLayout
-                android:id="@+id/btQuadra"
+                android:id="@+id/clCadastrarQuadra"
                 android:layout_width="112dp"
                 android:layout_height="109dp"
                 android:background="@drawable/canto_redondo"
                 android:backgroundTint="#FFFFFF"
-                android:onClick="openCadastroQuadra"
                 android:clickable="true"
                 tools:ignore="MissingConstraints">
 
@@ -157,13 +154,12 @@
             </androidx.constraintlayout.widget.ConstraintLayout>
 
             <androidx.constraintlayout.widget.ConstraintLayout
-                android:id="@+id/constraintLayout10"
+                android:id="@+id/clMeuPerfil"
                 android:layout_width="112dp"
                 android:layout_height="109dp"
                 android:layout_marginTop="16dp"
                 android:background="@drawable/canto_redondo"
                 android:backgroundTint="#FFFFFF"
-                android:onClick="openMeuPerfil"
                 android:clickable="true"
                 tools:ignore="MissingConstraints">
 

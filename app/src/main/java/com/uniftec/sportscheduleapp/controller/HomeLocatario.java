@@ -20,20 +20,36 @@ public class HomeLocatario extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_tela_inicial_locatario);
 
+        ConstraintLayout clNovaReserva = (ConstraintLayout) findViewById(R.id.clNovaReserva);
+        ConstraintLayout clAjuda = (ConstraintLayout) findViewById(R.id.clAjuda);
+        ConstraintLayout clMeuPerfil = (ConstraintLayout) findViewById(R.id.clMeuPerfil);
+
+        clNovaReserva.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View view) {
+                Intent telaLocalizaQuadra = new Intent(HomeLocatario.this, LocalizaQuadra.class);
+                startActivity(telaLocalizaQuadra);
+            }
+        });
+
+        clAjuda.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View view) {
+                Intent irFtec = new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.ftec.com.br"));
+                startActivity(irFtec);
+            }
+        });
+
+        clMeuPerfil.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent telaPerfil = new Intent(HomeLocatario.this, Perfil.class);
+                startActivity(telaPerfil);
+            }
+        });
+
     }
 
-    public void openSiteAjuda(View v) {
-        Intent irFtec = new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.ftec.com.br"));
-        startActivity(irFtec);
-    }
-
-    public void openTelaLocalizarQuadras(View v) {
-        Intent telaLocalizarQuadra = new Intent(this, LocalizaQuadra.class);
-        startActivity(telaLocalizarQuadra);
-    }
-
-    public void openMeuPerfil(View v) {
-        Intent telaPerfil = new Intent(this, Perfil.class);
-        startActivity(telaPerfil);
-    }
 }

@@ -47,15 +47,12 @@ public class ListaQuadrasCadastradas extends AppCompatActivity {
             }
         });
 
-
         Quadra quadra = (Quadra) getIntent().getSerializableExtra("quadra");
 
-        if(quadra != null){
+        if (quadra != null) {
             lista.add(quadra);
             adaptador.notifyDataSetChanged();
         }
-
-
     }
 
     public void onActivityResult(int requestCode, int resultCode, Intent data) {

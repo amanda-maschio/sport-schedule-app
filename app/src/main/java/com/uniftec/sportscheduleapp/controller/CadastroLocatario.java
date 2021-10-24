@@ -15,10 +15,16 @@ public class CadastroLocatario extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_cadastro_locatario);
+
+        Button btnCadastrar = (Button) findViewById(R.id.btnCadastrar);
+
+        btnCadastrar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent telaHomeLocatario = new Intent(CadastroLocatario.this, HomeLocatario.class);
+                startActivity(telaHomeLocatario);
+            }
+        });
     }
 
-    public void openTelaInicialLocatario(View v) {
-        Intent telaHomeLocatario = new Intent(this, HomeLocatario.class);
-        startActivity(telaHomeLocatario);
-    }
 }

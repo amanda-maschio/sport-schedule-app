@@ -162,19 +162,19 @@
         app:layout_constraintTop_toBottomOf="@+id/concordo" />
 
     <Button
-        android:id="@+id/btCadastrar"
-        android:layout_width="match_parent"
+        android:id="@+id/btnCadastrar"
+        android:text="CADASTRAR"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="24dp"
-        android:layout_marginEnd="24dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
         android:backgroundTint="#2e2e44"
-        android:onClick="openTelaInicialLocatario"
-        android:text="Cadastrar"
+        android:textSize="11dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/discordo"
-        app:layout_constraintVertical_bias="0.13999999" />
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

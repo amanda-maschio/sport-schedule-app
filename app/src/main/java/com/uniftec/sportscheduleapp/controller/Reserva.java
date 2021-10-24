@@ -56,11 +56,12 @@ public class Reserva extends AppCompatActivity {
     public void openFragmentReservaInfo()
     {
         Fragment fr = new Fragment();
+
         FragmentManager fm = getFragmentManager();
         FragmentTransaction fragmentTransaction = fm.beginTransaction();
         fragmentTransaction.replace(R.id.fReservaInfo, fr);
         fragmentTransaction.commit();
-        System.out.println("INFO");
+
     }
 
     public void openFragmentReservaReserva()
@@ -70,7 +71,6 @@ public class Reserva extends AppCompatActivity {
         FragmentTransaction fragmentTransaction = fm.beginTransaction();
         fragmentTransaction.replace(R.id.fReservaReserva, fr);
         fragmentTransaction.commit();
-        System.out.println("RESERVA");
     }
 
 }

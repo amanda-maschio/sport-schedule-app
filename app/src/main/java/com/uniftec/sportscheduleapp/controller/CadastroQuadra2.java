@@ -7,6 +7,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 
 import com.uniftec.sportscheduleapp.R;
 import com.uniftec.sportscheduleapp.entities.Item;
@@ -30,11 +31,27 @@ public class CadastroQuadra2 extends AppCompatActivity {
         adaptador = new AdapterListItens(lista);
         listaItens.setAdapter(adaptador);
         listaItens.setLayoutManager(new LinearLayoutManager(this));
-    }
 
-    public void botaoCadastroItem(View v) {
-        Intent telaItem = new Intent(this, CadastroItem.class);
-        startActivityForResult(telaItem, 2);
+        Button btnProximo = (Button) findViewById(R.id.btnProximo);
+        Button btnCadastrarItem = (Button) findViewById(R.id.btnCadastrarItem);
+
+        btnProximo.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View view) {
+                Intent telaImagens = new Intent(CadastroQuadra2.this, CadastroQuadra3.class);
+                startActivityForResult(telaImagens, 4);
+            }
+        });
+
+        btnCadastrarItem.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View view) {
+                Intent telaItem = new Intent(CadastroQuadra2.this, CadastroItem.class);
+                startActivityForResult(telaItem, 2);
+            }
+        });
     }
 
     public void onActivityResult(int requestCode, int resultCode, Intent data) {
@@ -56,11 +73,6 @@ public class CadastroQuadra2 extends AppCompatActivity {
             }
         }
         super.onActivityResult(requestCode, resultCode, data);
-    }
-
-    public void botaoProximoImagens (View v){
-        Intent telaImagens = new Intent(this, CadastroQuadra3.class);
-        startActivityForResult(telaImagens, 4);
     }
 
 }

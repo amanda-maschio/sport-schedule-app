@@ -3,6 +3,7 @@ package com.uniftec.sportscheduleapp.controller;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -14,10 +15,16 @@ public class CadastroLocador extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_cadastro_locador);
+
+        Button btnCadastrar = (Button) findViewById(R.id.btnCadastrar);
+
+        btnCadastrar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent telaHomeLocador = new Intent(CadastroLocador.this, HomeLocador.class);
+                startActivity(telaHomeLocador);
+            }
+        });
     }
 
-    public void openTelaInicialLocador(View v) {
-        Intent telaHomeLocador = new Intent(this, HomeLocador.class);
-        startActivity(telaHomeLocador);
-    }
 }

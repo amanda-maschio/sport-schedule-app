@@ -10,37 +10,21 @@
         android:id="@+id/btnMinhasQuadras"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="30dp"
         android:backgroundTint="#C5BFBF"
         android:gravity="left"
         android:text="MINHAS QUADRAS"
-        android:onClick="btnMinhasQuadras"
         android:textColor="@color/black"
-        app:layout_constraintTop_toBottomOf="@+id/textView10" />
+        tools:layout_editor_absoluteY="90dp" />
 
     <Button
-        android:id="@+id/button2"
+        android:id="@+id/btnCadastrarQuadra"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:backgroundTint="#C5BFBF"
         android:gravity="left"
         android:text="CADASTRAR QUADRA"
-        android:onClick="btnCadastrarQuadra"
         android:textColor="@color/black"
         app:layout_constraintTop_toBottomOf="@+id/btnMinhasQuadras"
         tools:layout_editor_absoluteX="171dp" />
 
-    <TextView
-        android:id="@+id/textView10"
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:layout_marginTop="10dp"
-        android:background="#B0C4DE"
-        android:gravity="center"
-        android:text="Gerenciar Quadras"
-        android:textColor="#F4F2F2"
-        android:textSize="20dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>
