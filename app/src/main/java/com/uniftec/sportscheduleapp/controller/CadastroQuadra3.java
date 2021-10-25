@@ -22,6 +22,7 @@ import androidx.core.app.ActivityCompat;
 
 import com.uniftec.sportscheduleapp.R;
 import com.uniftec.sportscheduleapp.entities.Quadra;
+import com.uniftec.sportscheduleapp.utils.Alerts;
 
 import java.io.File;
 import java.io.FileNotFoundException;
@@ -100,7 +101,7 @@ public class CadastroQuadra3 extends AppCompatActivity implements View.OnClickLi
                 if (grantResults.length > 0 && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
                     dispatchTakePictureIntent();
                 } else {
-                    Toast.makeText(this, "Não vai funcionar!", Toast.LENGTH_LONG).show();
+                    Alerts.noPermissionGranted(CadastroQuadra3.this);
                 }
                 return;
             }
@@ -108,6 +109,7 @@ public class CadastroQuadra3 extends AppCompatActivity implements View.OnClickLi
     }
 
     private void dispatchTakePictureIntent() {
+
         Intent takePictureIntent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
         if (takePictureIntent.resolveActivity(getPackageManager()) != null) {
             File photoFile = null;
@@ -116,7 +118,8 @@ public class CadastroQuadra3 extends AppCompatActivity implements View.OnClickLi
                 photoFile = File.createTempFile("PHOTOAPP", ".jpg", storageDir);
                 mCurrentPhotoPath = "file:" + photoFile.getAbsolutePath();
             } catch (IOException ex) {
-                Toast.makeText(getApplicationContext(), "Erro ao tirar a foto", Toast.LENGTH_SHORT).show();
+                ex.printStackTrace();
+                Alerts.genericErrorInOut(CadastroQuadra3.this);
             }
 
             if (photoFile != null) {
@@ -146,7 +149,8 @@ public class CadastroQuadra3 extends AppCompatActivity implements View.OnClickLi
                 aux = "";
 
             } catch (FileNotFoundException fnex) {
-                Toast.makeText(getApplicationContext(), "Foto não encontrada!", Toast.LENGTH_LONG).show();
+                fnex.printStackTrace();
+                Alerts.genericErrorFileNotFound(CadastroQuadra3.this, "Imagem");
             }
         }
     }

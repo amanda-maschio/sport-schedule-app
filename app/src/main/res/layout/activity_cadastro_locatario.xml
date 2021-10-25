@@ -25,6 +25,7 @@
             android:hint="E-mail"
             android:importantForAutofill="no"
             android:inputType="textEmailAddress"
+            android:background="@color/required_field_color"
             tools:targetApi="o" />
     </com.google.android.material.textfield.TextInputLayout>
 
@@ -49,6 +50,7 @@
             android:hint="Senha"
             android:importantForAutofill="no"
             android:inputType="textPassword"
+            android:background="@color/required_field_color"
             tools:targetApi="o" />
     </com.google.android.material.textfield.TextInputLayout>
 
@@ -67,13 +69,14 @@
         app:layout_constraintVertical_bias="0.0">
 
         <EditText
-            android:id="@+id/txtCPF"
+            android:id="@+id/txtCpf"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:ems="10"
             android:hint="CPF"
             android:importantForAutofill="no"
             android:inputType="number"
+            android:background="@color/required_field_color"
             tools:targetApi="o" />
     </com.google.android.material.textfield.TextInputLayout>
 
@@ -97,6 +100,7 @@
             android:hint="Nome"
             android:importantForAutofill="no"
             android:inputType="textPersonName"
+            android:background="@color/required_field_color"
             tools:targetApi="o" />
     </com.google.android.material.textfield.TextInputLayout>
 
@@ -138,28 +142,34 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/layoutData" />
 
-    <CheckBox
-        android:id="@+id/concordo"
-        android:layout_width="match_parent"
-        android:layout_height="25dp"
-        android:layout_marginStart="24dp"
-        android:layout_marginEnd="24dp"
-        android:text="Li e Concordo"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textTermos" />
+    <RadioGroup
+        android:id="@+id/rgTermos"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5dp"
+        app:layout_constraintTop_toBottomOf="@+id/textTermos">
 
-    <CheckBox
-        android:id="@+id/discordo"
-        android:layout_width="match_parent"
-        android:layout_marginStart="24dp"
-        android:layout_height="25dp"
-        android:layout_marginEnd="24dp"
-        android:text="Discordo"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/concordo" />
+        <RadioButton
+            android:id="@+id/rbConcordo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginEnd="24dp"
+            android:text="Li e Concordo"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <RadioButton
+            android:id="@+id/radioButton2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginEnd="24dp"
+            android:text="Discordo"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/rbConcordo" />
+    </RadioGroup>
 
     <Button
         android:id="@+id/btnCadastrar"
@@ -168,7 +178,6 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginEnd="16dp"
-        android:layout_marginBottom="16dp"
         android:backgroundTint="#2e2e44"
         android:textSize="11dp"
         app:layout_constraintBottom_toBottomOf="parent"

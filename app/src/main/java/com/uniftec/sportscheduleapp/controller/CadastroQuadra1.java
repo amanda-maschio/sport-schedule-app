@@ -2,15 +2,22 @@ package com.uniftec.sportscheduleapp.controller;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.text.TextUtils;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.uniftec.sportscheduleapp.R;
 import com.uniftec.sportscheduleapp.controller.CadastroQuadra2;
 import com.uniftec.sportscheduleapp.entities.Quadra;
+import com.uniftec.sportscheduleapp.utils.Alerts;
+import com.uniftec.sportscheduleapp.utils.Utils;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class CadastroQuadra1 extends AppCompatActivity {
 
@@ -26,13 +33,25 @@ public class CadastroQuadra1 extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_cad_quadra_1);
 
+        EditText txtNome = (EditText) findViewById(R.id.txtNome);
+        EditText txtRua = (EditText) findViewById(R.id.txtRua);
+        EditText txtBairro = (EditText) findViewById(R.id.txtBairro);
+        EditText txtCep = (EditText) findViewById(R.id.txtCep);
+        EditText txtCidade = (EditText) findViewById(R.id.txtCidade);
+
+        List<EditText> listRequiredFields = Utils.determineMandatoryFields();
         Button btnProximo = (Button) findViewById(R.id.btnProximo);
 
         btnProximo.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent telaQuadra2 = new Intent(CadastroQuadra1.this, CadastroQuadra2.class);
-                startActivityForResult(telaQuadra2, 3);
+
+                if (Utils.validateRequiredFields(listRequiredFields)) {
+                    Intent telaQuadra2 = new Intent(CadastroQuadra1.this, CadastroQuadra2.class);
+                    startActivityForResult(telaQuadra2, 3);
+                } else {
+                    Alerts.toastRequiredFields(CadastroQuadra1.this);
+                }
             }
         });
     }
@@ -61,4 +80,5 @@ public class CadastroQuadra1 extends AppCompatActivity {
         }
         super.onActivityResult(requestCode, resultCode, data);
     }
+
 }

@@ -7,4 +7,7 @@
     <color name="teal_700">#FF018786</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+    <color name="required_field_color">#C0C4C8</color> <!-- SILVER SAND -->
+    <color name="project_primary_color">#2E2E44</color> <!-- SPACE CADET -->
+    <color name="project_secondary_color">#2A2A3E</color> <!-- SPACE CADET 2 -->
 </resources>
