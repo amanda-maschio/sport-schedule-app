@@ -51,8 +51,8 @@ public class AdapterListQuadras extends RecyclerView.Adapter<AdapterListQuadras.
         }
 
         public void fill(Quadra data) {
-            nomeQuadra.setText(data.getNomeQuadra());
-            localQuadra.setText(data.getRua() + ", " + data.getBairro() + ", " + data.getCEP());
+            nomeQuadra.setText(data.getNome());
+            localQuadra.setText(data.getEndereco().getLocalidade() + ", " + data.getEndereco().getBairro() + ", " + data.getEndereco().getCep());
         }
 
     }

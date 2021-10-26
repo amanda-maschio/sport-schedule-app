@@ -1,7 +1,10 @@
 package com.uniftec.sportscheduleapp.entities;
 
-public class Endereco {
+import java.io.Serializable;
 
+public class Endereco implements Serializable {
+
+    private Integer codEndereco;
     private String cep;
     private String logradouro;
     private String complemento;
@@ -11,6 +14,15 @@ public class Endereco {
     private String unidade;
     private String ibge;
     private String gia;
+    private String numero;
+
+    public Integer getCodEndereco() {
+        return codEndereco;
+    }
+
+    public void setCodEndereco(Integer codEndereco) {
+        this.codEndereco = codEndereco;
+    }
 
     public String getCep() {
         return cep;
@@ -84,6 +96,15 @@ public class Endereco {
         this.gia = gia;
     }
 
+
+    public String getNumero() {
+        return numero;
+    }
+
+    public void setNumero(String numero) {
+        this.numero = numero;
+    }
+
     @Override
     public String toString() {
         return "Endereco{" +
@@ -96,6 +117,7 @@ public class Endereco {
                 ", unidade='" + unidade + '\'' +
                 ", ibge='" + ibge + '\'' +
                 ", gia='" + gia + '\'' +
+                ", numero='" + numero + '\'' +
                 '}';
     }
 }

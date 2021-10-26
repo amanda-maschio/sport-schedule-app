@@ -12,19 +12,14 @@ import com.uniftec.sportscheduleapp.R;
 import com.uniftec.sportscheduleapp.entities.Endereco;
 import com.uniftec.sportscheduleapp.entities.Quadra;
 import com.uniftec.sportscheduleapp.utils.Alerts;
-import com.uniftec.sportscheduleapp.utils.CepService;
+import com.uniftec.sportscheduleapp.services.CepService;
 import com.uniftec.sportscheduleapp.utils.Utils;
 
 import java.util.List;
 
 public class CadastroQuadra1 extends AppCompatActivity {
 
-    private EditText nome;
-    private EditText rua;
-    private EditText bairro;
-    private EditText cep;
-    private EditText cidade;
-    private EditText observacoes;
+    final Endereco[] endereco = {new Endereco()};
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -37,10 +32,10 @@ public class CadastroQuadra1 extends AppCompatActivity {
         EditText txtBairro = (EditText) findViewById(R.id.txtBairro);
         EditText txtCep = (EditText) findViewById(R.id.txtCep);
         EditText txtCidade = (EditText) findViewById(R.id.txtCidade);
+        EditText txtEstado = (EditText) findViewById(R.id.txtEstado);
+        EditText txtNumero = (EditText) findViewById(R.id.txtNumero);
 
-        final Endereco[] endereco = {new Endereco()};
-
-        List<EditText> listRequiredFields = Utils.determineMandatoryFields();
+        List<EditText> listRequiredFields = Utils.determineMandatoryFields(txtCep);
 
         txtCep.setOnFocusChangeListener(new View.OnFocusChangeListener() {
             @Override
@@ -50,7 +45,6 @@ public class CadastroQuadra1 extends AppCompatActivity {
                     endereco[0] = CepService.getAddressByCep(txtCep);
                     populateAddressFields(endereco[0]);
                 }
-
             }
         });
 
@@ -69,21 +63,14 @@ public class CadastroQuadra1 extends AppCompatActivity {
     }
 
     public void onActivityResult(int requestCode, int resultCode, Intent data) {
-
-        nome = findViewById(R.id.txtNome);
-        rua = findViewById(R.id.txtRua);
-        bairro = findViewById(R.id.txtBairro);
-        cep = findViewById(R.id.txtCep);
-        cidade = findViewById(R.id.txtCidade);
-        observacoes = findViewById(R.id.txtObs);
+        EditText txtNome = (EditText) findViewById(R.id.txtNome);
 
         if (requestCode == 3) {
             if (resultCode == 1) {
                 Quadra quadra = (Quadra) data.getSerializableExtra("quadra");
-                quadra.setNomeQuadra(nome.getText().toString());
-                quadra.setRua(rua.getText().toString());
-                quadra.setBairro(bairro.getText().toString());
-                quadra.setCEP(cep.getText().toString());
+                quadra.setNome(txtNome.getText().toString());
+                quadra.setEndereco(endereco[0]);
+
                 Intent resultado = new Intent();
                 resultado.putExtra("quadra", quadra);
                 setResult(1, resultado);
@@ -95,13 +82,18 @@ public class CadastroQuadra1 extends AppCompatActivity {
 
     public void populateAddressFields(Endereco endereco) {
 
+        EditText txtNumero = (EditText) findViewById(R.id.txtNumero);
+        endereco.setNumero(txtNumero.getText().toString());
+
         EditText txtRua = (EditText) findViewById(R.id.txtRua);
         EditText txtBairro = (EditText) findViewById(R.id.txtBairro);
         EditText txtCidade = (EditText) findViewById(R.id.txtCidade);
+        EditText txtEstado = (EditText) findViewById(R.id.txtEstado);
 
         txtRua.setText(endereco.getLogradouro());
         txtBairro.setText(endereco.getBairro());
         txtCidade.setText(endereco.getLocalidade());
+        txtEstado.setText(endereco.getUf());
 
     }
 

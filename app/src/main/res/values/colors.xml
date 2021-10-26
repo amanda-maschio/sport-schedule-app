@@ -8,6 +8,11 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
     <color name="required_field_color">#C0C4C8</color> <!-- SILVER SAND -->
-    <color name="project_primary_color">#2E2E44</color> <!-- SPACE CADET -->
+    <color name="project_primary_color">#2E3045</color> <!-- SPACE CADET -->
     <color name="project_secondary_color">#2A2A3E</color> <!-- SPACE CADET 2 -->
+    <color name="project_button_color">#2E2E44</color> <!-- SPACE CADET 3 -->
+    <color name="project_text_secondary_color">#8492A6</color> <!-- SHADOW BLUE -->
+    <color name="project_text_title_color">#040404</color> <!-- RIGHT BLACK FOGRA 39 -->
+    <color name="project_search_bar">#B2B0B0</color> <!-- SILVER CHALICE -->
+    <color name="project_bg_profile">#686C9A</color> <!-- DARK BLUE GRAY -->
 </resources>

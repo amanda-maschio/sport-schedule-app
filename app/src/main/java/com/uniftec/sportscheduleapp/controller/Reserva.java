@@ -4,6 +4,7 @@ import android.app.Fragment;
 import android.app.FragmentManager;
 import android.app.FragmentTransaction;
 import android.os.Bundle;
+import android.util.Log;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -51,12 +52,26 @@ public class Reserva extends AppCompatActivity {
     }
 
     public void openFragmentReservaInfo() {
-        Fragment fr = new Fragment();
 
+        Fragment fr = new Fragment();
         FragmentManager fm = getFragmentManager();
         FragmentTransaction fragmentTransaction = fm.beginTransaction();
         fragmentTransaction.replace(R.id.fReservaInfo, fr);
         fragmentTransaction.commit();
+
+        FragmentTransaction ft = getFragmentManager().beginTransaction();
+        ft.setCustomAnimations(android.R.animator.fade_in,
+                android.R.animator.fade_out);
+
+        if (fr.isHidden()) {
+            ft.show(fr);
+            Log.d("hidden","Show");
+        } else {
+            ft.hide(fr);
+            Log.d("Shown","Hide");
+        }
+
+        ft.commit();
 
     }
 
@@ -66,6 +81,20 @@ public class Reserva extends AppCompatActivity {
         FragmentTransaction fragmentTransaction = fm.beginTransaction();
         fragmentTransaction.replace(R.id.fReservaReserva, fr);
         fragmentTransaction.commit();
+
+        FragmentTransaction ft = getFragmentManager().beginTransaction();
+        ft.setCustomAnimations(android.R.animator.fade_in,
+                android.R.animator.fade_out);
+
+        if (fr.isHidden()) {
+            ft.show(fr);
+            Log.d("hidden","Show");
+        } else {
+            ft.hide(fr);
+            Log.d("Shown","Hide");
+        }
+
+        ft.commit();
     }
 
 }

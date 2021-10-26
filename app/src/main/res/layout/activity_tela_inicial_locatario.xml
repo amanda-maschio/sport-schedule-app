@@ -4,8 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#2e2e44"
-    android:backgroundTint="#2e2e44"
+    android:background="@color/project_primary_color"
+    android:backgroundTint="@color/project_primary_color"
     tools:context=".controller.HomeLocatario">
 
     <ImageView

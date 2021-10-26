@@ -1,10 +1,11 @@
-package com.uniftec.sportscheduleapp.utils;
+package com.uniftec.sportscheduleapp.services;
 
 import android.os.StrictMode;
 import android.widget.EditText;
 
 import com.google.gson.Gson;
 import com.uniftec.sportscheduleapp.entities.Endereco;
+import com.uniftec.sportscheduleapp.utils.Utils;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
@@ -13,7 +14,7 @@ import java.net.URL;
 
 public class CepService {
 
-    static String webService = "http://viacep.com.br/ws/";
+    static String webService = "https://viacep.com.br/ws/";
     static int codigoSucesso = 200;
 
     public static Endereco getAddressByCep(EditText etCep) {
