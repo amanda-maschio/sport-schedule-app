@@ -1,8 +1,5 @@
 package com.uniftec.sportscheduleapp.entities;
 
-import android.media.Image;
-import android.widget.CheckBox;
-
 import java.io.Serializable;
 
 public class Quadra implements Serializable {

@@ -1,17 +1,15 @@
 package com.uniftec.sportscheduleapp.controller;
 
+import android.content.Intent;
+import android.os.Bundle;
+import android.view.View;
+
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import android.content.Intent;
-import android.os.Bundle;
-import android.view.View;
-import android.widget.Button;
-
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.uniftec.sportscheduleapp.R;
-import com.uniftec.sportscheduleapp.entities.Item;
 import com.uniftec.sportscheduleapp.entities.Quadra;
 
 import java.util.ArrayList;

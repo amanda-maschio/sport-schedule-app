@@ -1,14 +1,11 @@
 package com.uniftec.sportscheduleapp.controller;
 
+import android.app.Fragment;
 import android.app.FragmentManager;
 import android.app.FragmentTransaction;
-import android.content.Intent;
 import android.os.Bundle;
-import android.app.Fragment;
-import android.view.View;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.cardview.widget.CardView;
 
 import com.google.android.material.tabs.TabItem;
 import com.google.android.material.tabs.TabLayout;
@@ -51,10 +48,9 @@ public class Reserva extends AppCompatActivity {
             }
         });
 
-        }
+    }
 
-    public void openFragmentReservaInfo()
-    {
+    public void openFragmentReservaInfo() {
         Fragment fr = new Fragment();
 
         FragmentManager fm = getFragmentManager();
@@ -64,8 +60,7 @@ public class Reserva extends AppCompatActivity {
 
     }
 
-    public void openFragmentReservaReserva()
-    {
+    public void openFragmentReservaReserva() {
         Fragment fr = new Fragment();
         FragmentManager fm = getFragmentManager();
         FragmentTransaction fragmentTransaction = fm.beginTransaction();

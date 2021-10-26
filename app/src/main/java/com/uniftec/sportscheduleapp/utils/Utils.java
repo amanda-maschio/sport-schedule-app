@@ -2,6 +2,8 @@ package com.uniftec.sportscheduleapp.utils;
 
 import android.widget.EditText;
 
+import java.io.BufferedReader;
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -44,6 +46,15 @@ public class Utils {
         }
 
         return listRequiredFields;
+    }
+
+    public static String jsonToString(BufferedReader br) throws IOException {
+        String response, jsonToString = "";
+
+        while ((response = br.readLine()) != null) {
+            jsonToString += response;
+        }
+        return jsonToString;
     }
 
 }
