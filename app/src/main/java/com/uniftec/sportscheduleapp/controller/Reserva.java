@@ -3,14 +3,19 @@ package com.uniftec.sportscheduleapp.controller;
 import android.app.Fragment;
 import android.app.FragmentManager;
 import android.app.FragmentTransaction;
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.View;
+import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.google.android.material.tabs.TabItem;
 import com.google.android.material.tabs.TabLayout;
 import com.uniftec.sportscheduleapp.R;
+import com.uniftec.sportscheduleapp.entities.Endereco;
+import com.uniftec.sportscheduleapp.services.MapsMarkerActivity;
 
 
 public class Reserva extends AppCompatActivity {
@@ -23,6 +28,7 @@ public class Reserva extends AppCompatActivity {
         TabItem tabItemInfo = (TabItem) findViewById(R.id.tiInfo);
         TabItem tabItemReserva = (TabItem) findViewById(R.id.tiReserva);
         TabLayout tl = (TabLayout) findViewById(R.id.tbOpcoes);
+        TextView lblEnderecoQuadra = (TextView) findViewById(R.id.lblEnderecoQuadra);
 
         tl.addOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
 
@@ -46,6 +52,25 @@ public class Reserva extends AppCompatActivity {
             @Override
             public void onTabReselected(TabLayout.Tab tab) {
 
+            }
+        });
+
+        lblEnderecoQuadra.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View view) {
+
+                //Dados mockados para teste
+                Endereco endereco = new Endereco();
+                endereco.setCep("95020-001");
+                endereco.setLogradouro("Rua Sinimbu");
+                endereco.setBairro("Centro");
+                endereco.setLocalidade("Caxias do Sul");
+                endereco.setUf("RS");
+
+                Intent telaMaps = new Intent(Reserva.this, MapsMarkerActivity.class);
+                telaMaps.putExtra("endereco", endereco);
+                startActivity(telaMaps);
             }
         });
 

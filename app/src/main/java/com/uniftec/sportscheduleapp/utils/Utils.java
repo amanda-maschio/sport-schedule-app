@@ -2,6 +2,12 @@ package com.uniftec.sportscheduleapp.utils;
 
 import android.widget.EditText;
 
+import com.uniftec.sportscheduleapp.entities.Endereco;
+
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
+
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.util.ArrayList;
@@ -48,6 +54,12 @@ public class Utils {
         return listRequiredFields;
     }
 
+    /**
+     * Transforma o json recebido pelo br para String
+     * @param br
+     * @return
+     * @throws IOException
+     */
     public static String jsonToString(BufferedReader br) throws IOException {
         String response, jsonToString = "";
 
@@ -55,6 +67,36 @@ public class Utils {
             jsonToString += response;
         }
         return jsonToString;
+    }
+
+    /**
+     * Método responsável por retornar a latitude e longitude de determinado endereço.
+     * @param json
+     * @return
+     */
+    public static Endereco getLatLong(JSONObject json, Endereco endereco) {
+
+        Double latitude = 0.0;
+        Double longitude = 0.0;
+
+        try {
+
+            longitude = ((JSONArray) json.get("results")).getJSONObject(0)
+                    .getJSONObject("geometry").getJSONObject("location")
+                    .getDouble("lng");
+
+            latitude = ((JSONArray) json.get("results")).getJSONObject(0)
+                    .getJSONObject("geometry").getJSONObject("location")
+                    .getDouble("lat");
+
+            endereco.setLatitude(latitude);
+            endereco.setLongitude(longitude);
+
+        } catch (JSONException e) {
+            e.printStackTrace();
+
+        }
+        return endereco;
     }
 
 }

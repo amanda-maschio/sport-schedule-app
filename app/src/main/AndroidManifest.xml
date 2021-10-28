@@ -3,19 +3,30 @@
     xmlns:tools="http://schemas.android.com/tools"
     package="com.uniftec.sportscheduleapp">
 
+    <uses-permission android:name="Android.permission.ACCESS_COARSE_LOCATION"/>
     <uses-permission android:name="android.permission.INTERNET"/>
-    <uses-permission android:name="android.permission.CAMERA"></uses-permission>
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"></uses-permission>
-    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"></uses-permission>
+    <uses-permission android:name="android.permission.CAMERA"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
     <uses-feature android:name="android.hardware.camera" android:required="true" />
 
     <application
+
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="Sport Schedule"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.SportScheduleApp">
+
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyCkkFiizKlv61YWwfSaANVpXrngZoIUCNc" />
+
         <activity
             android:name=".controller.ListaQuadrasCadastradas"
             android:label="Minhas Quadras"
@@ -92,6 +103,11 @@
             android:name=".controller.Reserva"
             android:exported="true"
             android:theme="@style/Theme.AppCompat.NoActionBar"/>
+        <activity
+            android:name=".services.MapsMarkerActivity"
+            android:label="Mapa"
+            android:parentActivityName=".controller.Reserva"
+            android:exported="true"/>
     </application>
 
 </manifest>

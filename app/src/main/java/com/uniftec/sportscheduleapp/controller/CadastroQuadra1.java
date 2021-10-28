@@ -12,7 +12,7 @@ import com.uniftec.sportscheduleapp.R;
 import com.uniftec.sportscheduleapp.entities.Endereco;
 import com.uniftec.sportscheduleapp.entities.Quadra;
 import com.uniftec.sportscheduleapp.utils.Alerts;
-import com.uniftec.sportscheduleapp.services.CepService;
+import com.uniftec.sportscheduleapp.services.AddressService;
 import com.uniftec.sportscheduleapp.utils.Utils;
 
 import java.util.List;
@@ -42,7 +42,7 @@ public class CadastroQuadra1 extends AppCompatActivity {
             public void onFocusChange(View v, boolean hasFocus) {
                 if (!hasFocus) {
                     EditText txtCep = (EditText) findViewById(R.id.txtCep);
-                    endereco[0] = CepService.getAddressByCep(txtCep);
+                    endereco[0] = AddressService.getAddressByCep(txtCep);
                     populateAddressFields(endereco[0]);
                 }
             }
