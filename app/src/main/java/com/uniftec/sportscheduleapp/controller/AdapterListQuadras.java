@@ -3,14 +3,12 @@ package com.uniftec.sportscheduleapp.controller;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.uniftec.sportscheduleapp.R;
-import com.uniftec.sportscheduleapp.entities.Item;
 import com.uniftec.sportscheduleapp.entities.Quadra;
 
 import java.util.List;
@@ -53,8 +51,8 @@ public class AdapterListQuadras extends RecyclerView.Adapter<AdapterListQuadras.
         }
 
         public void fill(Quadra data) {
-            nomeQuadra.setText(data.getNomeQuadra());
-            localQuadra.setText(data.getRua()+", "+data.getBairro()+", "+data.getCEP());
+            nomeQuadra.setText(data.getNome());
+            localQuadra.setText(data.getEndereco().getLocalidade() + ", " + data.getEndereco().getBairro() + ", " + data.getEndereco().getCep());
         }
 
     }

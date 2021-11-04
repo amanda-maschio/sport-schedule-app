@@ -8,7 +8,6 @@ import android.view.WindowManager;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.uniftec.sportscheduleapp.R;
-import com.uniftec.sportscheduleapp.controller.CadastroQuadra1;
 
 public class Splash extends AppCompatActivity {
 
@@ -27,6 +26,6 @@ public class Splash extends AppCompatActivity {
                 startActivity(intent);
                 finish();
             }
-        },5000);
+        }, 5000);
     }
 }

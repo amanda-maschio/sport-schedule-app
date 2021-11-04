@@ -1,108 +1,124 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="230dp"
-    android:layout_gravity="end"
-    android:background="@color/white"
-    app:layout_anchorGravity="end">
+    android:layout_height="wrap_content"
+    android:fillViewport="false">
 
-    <TextView
-        android:id="@+id/lblModalidade"
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="6dp"
-        android:text="Modalidade"
-        android:textColor="#8492A6"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        tools:ignore="MissingConstraints" />
+        android:layout_height="230dp"
+        android:layout_gravity="end"
+        android:background="@color/white"
+        app:layout_anchorGravity="end">
 
-    <Spinner
-        android:id="@+id/spModalidade"
-        android:layout_width="318dp"
-        android:layout_height="wrap_content"
-        android:entries="@array/lista_modalidade"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/lblModalidade" />
+        <TextView
+            android:id="@+id/lblModalidade"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="6dp"
+            android:text="Modalidade"
+            android:textColor="#8492A6"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:ignore="MissingConstraints" />
 
-
-    <TextView
-        android:id="@+id/lblData"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="6dp"
-        android:layout_marginTop="6dp"
-        android:text="Data"
-        android:textColor="#8492A6"
-        app:layout_constraintTop_toBottomOf="@+id/spModalidade" />
-
-    <Spinner
-        android:id="@+id/spData"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:entries="@array/lista_data"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/lblData"
-        tools:ignore="MissingConstraints" />
-
-    <TextView
-        android:id="@+id/lblHorario"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="6dp"
-        android:layout_marginTop="6dp"
-        android:text="Horário"
-        android:textColor="#8492A6"
-        app:layout_constraintTop_toBottomOf="@+id/spData" />
-
-    <Spinner
-        android:id="@+id/spHorario"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:entries="@array/lista_horario"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/lblHorario" />
-
-    <TextView
-        android:id="@+id/lblItens"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="6dp"
-        android:layout_marginTop="6dp"
-        android:text="Itens (opcional)"
-        android:textColor="#8492A6"
-        app:layout_constraintTop_toBottomOf="@+id/spHorario" />
-
-    <Spinner
-        android:id="@+id/spItens"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:entries="@array/lista_itens"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/lblItens"
-        tools:ignore="MissingConstraints" />
-
-    <Button
-        android:id="@+id/btnReserva"
-        android:layout_width="wrap_content"
-        android:layout_height="36dp"
-        android:backgroundTint="#5dd26c"
-        android:text="RESERVAR"
-        android:textSize="11dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/spItens" />
+        <Spinner
+            android:id="@+id/spModalidade"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="6dp"
+            android:entries="@array/lista_modalidade"
+            android:prompt="@string/hint_modalidade"
+            android:spinnerMode="dialog"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/lblModalidade" />
 
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+        <TextView
+            android:id="@+id/lblData"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="6dp"
+            android:layout_marginTop="6dp"
+            android:text="Data"
+            android:textColor="#8492A6"
+            app:layout_constraintTop_toBottomOf="@+id/spModalidade" />
+
+        <Spinner
+            android:id="@+id/spData"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="6dp"
+            android:entries="@array/lista_data"
+            android:prompt="@string/hint_data"
+            android:spinnerMode="dialog"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/lblData"
+            tools:ignore="MissingConstraints" />
+
+        <TextView
+            android:id="@+id/lblHorario"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="6dp"
+            android:layout_marginTop="6dp"
+            android:text="Horário"
+            android:textColor="#8492A6"
+            app:layout_constraintTop_toBottomOf="@+id/spData" />
+
+        <Spinner
+            android:id="@+id/spHorario"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="6dp"
+            android:entries="@array/lista_horario"
+            android:prompt="@string/hint_horario"
+            android:spinnerMode="dialog"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/lblHorario" />
+
+        <TextView
+            android:id="@+id/lblItens"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="6dp"
+            android:layout_marginTop="6dp"
+            android:text="Itens (opcional)"
+            android:textColor="#8492A6"
+            app:layout_constraintTop_toBottomOf="@+id/spHorario" />
+
+        <Spinner
+            android:id="@+id/spItens"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="6dp"
+            android:entries="@array/lista_itens"
+            android:prompt="@string/hint_item"
+            android:spinnerMode="dialog"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/lblItens"
+            tools:ignore="MissingConstraints" />
+
+        <Button
+            android:id="@+id/btnReserva"
+            android:layout_width="wrap_content"
+            android:layout_height="36dp"
+            android:backgroundTint="#5dd26c"
+            android:text="RESERVAR"
+            android:textSize="11dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/spItens" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

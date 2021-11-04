@@ -25,8 +25,8 @@
         android:layout_marginEnd="24dp"
         android:layout_marginBottom="24dp"
         android:clickable="true"
-        app:tint="#FFFFFF"
-        app:backgroundTint="#2E3145"
+        app:tint="@color/white"
+        app:backgroundTint="@color/project_primary_color"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:srcCompat="@drawable/ic_baseline_add_24" />

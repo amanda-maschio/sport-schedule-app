@@ -4,8 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#2e2e44"
-    android:backgroundTint="#2e2e44"
+    android:background="@color/project_primary_color"
+    android:backgroundTint="@color/project_primary_color"
     tools:context=".controller.HomeLocatario">
 
     <ImageView
@@ -38,14 +38,12 @@
             tools:ignore="MissingConstraints">
 
             <androidx.constraintlayout.widget.ConstraintLayout
-
-                android:id="@+id/btajuda"
+                android:id="@+id/clAjuda"
                 android:layout_width="112dp"
                 android:layout_height="109dp"
                 android:layout_weight="2"
                 android:background="@drawable/canto_redondo"
                 android:backgroundTint="#FFFFFF"
-                android:onClick="openSiteAjuda"
                 android:clickable="true"
                 tools:ignore="MissingConstraints">
 
@@ -74,7 +72,7 @@
             </androidx.constraintlayout.widget.ConstraintLayout>
 
             <androidx.constraintlayout.widget.ConstraintLayout
-                android:id="@+id/constraintLayout3"
+                android:id="@+id/clMinhasReservas"
                 android:layout_width="112dp"
                 android:layout_height="109dp"
                 android:layout_marginTop="16dp"
@@ -121,12 +119,11 @@
             tools:ignore="MissingConstraints">
 
             <androidx.constraintlayout.widget.ConstraintLayout
-                android:id="@+id/constraintLayout2"
+                android:id="@+id/clNovaReserva"
                 android:layout_width="112dp"
                 android:layout_height="109dp"
                 android:background="@drawable/canto_redondo"
                 android:backgroundTint="#FFFFFF"
-                android:onClick="openTelaLocalizarQuadras"
                 android:clickable="true"
                 tools:ignore="MissingConstraints">
 
@@ -155,13 +152,12 @@
             </androidx.constraintlayout.widget.ConstraintLayout>
 
             <androidx.constraintlayout.widget.ConstraintLayout
-                android:id="@+id/constraintLayout4"
+                android:id="@+id/clMeuPerfil"
                 android:layout_width="112dp"
                 android:layout_height="109dp"
                 android:layout_marginTop="16dp"
                 android:background="@drawable/canto_redondo"
                 android:backgroundTint="#FFFFFF"
-                android:onClick="openMeuPerfil"
                 android:clickable="true"
                 tools:ignore="MissingConstraints">
 

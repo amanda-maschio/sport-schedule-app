@@ -1,119 +1,114 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="#FFFFFF">
+    android:layout_height="wrap_content"
+    android:fillViewport="false">
 
-    <ImageView
-        android:id="@+id/imgBackgroundQuadra"
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
-        android:layout_height="200dp"
-        android:scaleType="fitXY"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:srcCompat="@drawable/gray_bg"
-        tools:layout_editor_absoluteY="-1dp"
-        tools:ignore="MissingConstraints" />
+        android:layout_height="match_parent"
+        android:background="#FFFFFF">
 
-    <TextView
-        android:id="@+id/txtFotos"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginRight="10dp"
-        android:layout_marginBottom="170dp"
-        android:clickable="true"
-        android:text="Fotos >"
-        android:textColor="#686666"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="@+id/imgBackgroundQuadra"
-        app:layout_constraintEnd_toEndOf="@+id/imgBackgroundQuadra"
-        tools:layout_editor_absoluteX="349dp" />
+        <ImageView
+            android:id="@+id/imgBackgroundQuadra"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:scaleType="fitXY"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:srcCompat="@drawable/gray_bg"
+            tools:ignore="MissingConstraints"
+            tools:layout_editor_absoluteY="-1dp" />
 
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/llInfoQuadra"
-        android:layout_width="match_parent"
-        android:layout_height="60dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        tools:layout_editor_absoluteY="200dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imgBackgroundQuadra"
-        >
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/llInfoQuadra"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imgBackgroundQuadra"
+            tools:layout_editor_absoluteY="200dp">
 
-        <TextView
-            android:id="@+id/lblNomeQuadra"
-            android:layout_width="wrap_content"
+            <TextView
+                android:id="@+id/lblNomeQuadra"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:text="QUADRA XXX"
+                android:textColor="#47525E"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="@+id/llInfoQuadra"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/lblEnderecoQuadra"
+                android:layout_width="wrap_content"
+                android:layout_height="25dp"
+                android:layout_marginStart="8dp"
+                android:clickable="true"
+                android:onClick="openMaps"
+                android:text="📍 Centro - Caxias do Sul"
+                android:textColor="#8492A6"
+                app:layout_constraintStart_toStartOf="@+id/llInfoQuadra"
+                app:layout_constraintTop_toBottomOf="@+id/lblNomeQuadra" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <com.google.android.material.tabs.TabLayout
+            android:id="@+id/tbOpcoes"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginStart="8dp"
-            android:layout_marginTop="8dp"
-            android:text="QUADRA XXX"
-            android:textColor="#47525E"
-            android:textSize="20sp"
-            android:textStyle="bold"
-            app:layout_constraintStart_toStartOf="@+id/llInfoQuadra"
-            app:layout_constraintTop_toTopOf="parent" />
+            android:layout_marginTop="5dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/llInfoQuadra"
+            app:tabIndicatorColor="#47525E"
+            app:tabSelectedTextColor="#47525E"
+            app:tabTextColor="#969FAA">
 
-        <TextView
-            android:id="@+id/lblEnderecoQuadra"
-            android:layout_width="wrap_content"
-            android:layout_height="25dp"
-            android:layout_marginStart="8dp"
-            android:text="Centro - Caxias do Sul"
-            android:textColor="#8492A6"
-            app:layout_constraintStart_toStartOf="@+id/llInfoQuadra"
-            app:layout_constraintTop_toBottomOf="@+id/lblNomeQuadra" />
+            <com.google.android.material.tabs.TabItem
+                android:id="@+id/tiInfo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="INFO" />
+
+            <com.google.android.material.tabs.TabItem
+                android:id="@+id/tiReserva"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="RESERVA" />
+
+        </com.google.android.material.tabs.TabLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tbOpcoes">
+
+            <fragment
+                android:id="@+id/fReservaInfo"
+                class="com.uniftec.sportscheduleapp.controller.ReservaInfo"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                tools:ignore="MissingConstraints"
+                tools:layout_editor_absoluteX="0dp"
+                tools:layout_editor_absoluteY="0dp" />
+
+            <fragment
+                android:id="@+id/fReservaReserva"
+                class="com.uniftec.sportscheduleapp.controller.ReservaReserva"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                tools:ignore="MissingConstraints" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
-
-    <com.google.android.material.tabs.TabLayout
-        android:id="@+id/tbOpcoes"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="5dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/llInfoQuadra"
-        app:tabIndicatorColor="#47525E"
-        app:tabSelectedTextColor="#47525E"
-        app:tabTextColor="#969FAA">
-
-        <com.google.android.material.tabs.TabItem
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="INFO"
-            android:id="@+id/tiInfo"/>
-
-        <com.google.android.material.tabs.TabItem
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="RESERVA"
-            android:id="@+id/tiReserva"/>
-
-    </com.google.android.material.tabs.TabLayout>
-
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:layout_width="match_parent"
-        android:layout_height="218dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tbOpcoes">
-
-        <fragment
-            android:layout_weight="1"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            class="com.uniftec.sportscheduleapp.controller.ReservaInfo"
-            android:id="@+id/fReservaInfo"
-            tools:ignore="MissingConstraints" />
-
-        <fragment
-            android:layout_weight="1"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            class="com.uniftec.sportscheduleapp.controller.ReservaReserva"
-            android:id="@+id/fReservaReserva"
-            tools:ignore="MissingConstraints" />
-
-    </androidx.constraintlayout.widget.ConstraintLayout>
-
-</androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

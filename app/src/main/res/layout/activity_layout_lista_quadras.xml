@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:backgroundTint="#FFFFFF"
+    android:backgroundTint="@color/white"
     android:layout_margin="16dp"
     android:background="@drawable/canto_redondo"
     android:translationZ="2dp"
@@ -34,13 +34,4 @@
         android:gravity="center"
         android:text="TextView" />
 
-    <Button
-        android:id="@+id/detalhes"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="40dp"
-        android:layout_marginTop="15dp"
-        android:background="#03FFFFFF"
-        android:text="Ver Detalhes"
-        android:textColor="#000000"/>
 </LinearLayout>

@@ -1,94 +1,92 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="230dp"
-    android:layout_gravity="end"
-    android:background="@color/white"
-    app:layout_anchorGravity="end">
+    android:layout_height="wrap_content"
+    android:fillViewport="false">
 
-    <TextView
-        android:id="@+id/lblModalidades"
-        android:layout_width="318dp"
-        android:layout_height="wrap_content"
-        android:text="Modalidades"
-        android:layout_marginStart="5dp"
-        android:layout_marginTop="5dp"
-        android:textColor="#8492A6"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        tools:ignore="MissingConstraints" />
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="230dp"
+        android:layout_gravity="end"
+        android:background="@color/white"
+        app:layout_anchorGravity="end">
 
-    <Button
-        android:id="@+id/btnMd1"
-        android:layout_width="130dp"
-        android:layout_height="wrap_content"
-        android:backgroundTint="#2E3145"
-        android:clickable="false"
-        android:text="Futsal"
-        android:textColor="#8492A6"
-        android:layout_marginTop="8dp"
-        android:textSize="10dp"
-        app:layout_constraintEnd_toStartOf="@+id/btnMd2"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/lblModalidades" />
+        <TextView
+            android:id="@+id/lblModalidades"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="5dp"
+            android:text="Modalidades"
+            android:textColor="@color/project_text_secondary_color"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:ignore="MissingConstraints" />
 
-    <Button
-        android:id="@+id/btnMd2"
-        android:layout_width="130dp"
-        android:layout_height="wrap_content"
-        android:backgroundTint="#2E3145"
-        android:clickable="false"
-        android:layout_marginTop="8dp"
-        android:text="Handebol"
-        android:textColor="#8492A6"
-        android:textSize="10dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/btnMd1"
-        app:layout_constraintTop_toBottomOf="@+id/lblModalidades" />
+        <Button
+            android:id="@+id/btnMd1"
+            android:layout_width="130dp"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/project_button_color"
+            android:clickable="false"
+            android:text="Futsal"
+            android:textColor="@color/project_text_secondary_color"
+            android:textSize="10dp"
+            app:layout_constraintEnd_toStartOf="@+id/btnMd2"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/lblModalidades" />
 
-    <TextView
-        android:id="@+id/lblItensDisponiveis"
-        android:layout_width="318dp"
-        android:layout_height="wrap_content"
-        android:text="Itens Disponíveis"
-        android:textColor="#8492A6"
-        android:layout_marginStart="5dp"
-        android:layout_marginTop="5dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnMd1" />
+        <Button
+            android:id="@+id/btnMd2"
+            android:layout_width="130dp"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/project_button_color"
+            android:clickable="false"
+            android:text="Handebol"
+            android:textColor="@color/project_text_secondary_color"
+            android:textSize="10dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/btnMd1"
+            app:layout_constraintTop_toBottomOf="@+id/lblModalidades" />
 
+        <TextView
+            android:id="@+id/lblItensDisponiveis"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="5dp"
+            android:text="Itens Disponíveis"
+            android:textColor="@color/project_text_secondary_color"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btnMd1" />
 
-    <Button
-        android:id="@+id/btnMd3"
-        android:layout_width="130dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:backgroundTint="#2E3145"
-        android:clickable="false"
-        android:text="Bolas de Futsal"
-        android:textColor="#8492A6"
-        android:textSize="10dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.105"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/lblItensDisponiveis" />
+        <Button
+            android:id="@+id/btnMd3"
+            android:layout_width="130dp"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/project_button_color"
+            android:clickable="false"
+            android:text="Bolas de Futsal"
+            android:textColor="@color/project_text_secondary_color"
+            android:textSize="10dp"
+            app:layout_constraintEnd_toStartOf="@+id/btnMd2"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/lblItensDisponiveis" />
 
-    <Button
-        android:id="@+id/btnMd4"
-        android:layout_width="130dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="8dp"
-        android:backgroundTint="#2E3145"
-        android:clickable="false"
-        android:text="Cones de PVC"
-        android:textColor="#8492A6"
-        android:textSize="10dp"
-        app:layout_constraintStart_toEndOf="@+id/btnMd3"
-        app:layout_constraintTop_toBottomOf="@+id/lblItensDisponiveis" />
+        <Button
+            android:id="@+id/btnMd4"
+            android:layout_width="130dp"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/project_button_color"
+            android:clickable="false"
+            android:text="Cones de PVC"
+            android:textColor="@color/project_text_secondary_color"
+            android:textSize="10dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/btnMd1"
+            app:layout_constraintTop_toBottomOf="@+id/lblItensDisponiveis" />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
