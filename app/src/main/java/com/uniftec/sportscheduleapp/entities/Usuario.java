@@ -9,7 +9,7 @@ public class Usuario implements Serializable {
     private String senha;
     private String indTipoUsuario; //LD - locador | LT - locatario
 
-    Pessoa pessoa;
+    private Pessoa pessoa = new Pessoa();
 
     public Integer getCodUsuario() {
         return codUsuario;
@@ -41,5 +41,13 @@ public class Usuario implements Serializable {
 
     public void setIndTipoUsuario(String indTipoUsuario) {
         this.indTipoUsuario = indTipoUsuario;
+    }
+
+    public Pessoa getPessoa() {
+        return pessoa;
+    }
+
+    public void setPessoa(Pessoa pessoa) {
+        this.pessoa = pessoa;
     }
 }

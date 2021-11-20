@@ -1,14 +1,17 @@
 package com.uniftec.sportscheduleapp.entities;
 
+import android.graphics.Bitmap;
+
 import java.io.Serializable;
 
 public class Pessoa implements Serializable {
 
     private Integer codPessoa;
     private String nome;
+    private String sobrenome;
     private String telefone;
     private String indTipoPessoa; //F - fisica | J - juridica
-    private String foto;
+    private Bitmap foto;
 
     public Integer getCodPessoa() {
         return codPessoa;
@@ -34,11 +37,11 @@ public class Pessoa implements Serializable {
         this.indTipoPessoa = indTipoPessoa;
     }
 
-    public String getFoto() {
+    public Bitmap getFoto() {
         return foto;
     }
 
-    public void setFoto(String foto) {
+    public void setFoto(Bitmap foto) {
         this.foto = foto;
     }
 
@@ -48,5 +51,13 @@ public class Pessoa implements Serializable {
 
     public void setTelefone(String telefone) {
         this.telefone = telefone;
+    }
+
+    public String getSobrenome() {
+        return sobrenome;
+    }
+
+    public void setSobrenome(String sobrenome) {
+        this.sobrenome = sobrenome;
     }
 }

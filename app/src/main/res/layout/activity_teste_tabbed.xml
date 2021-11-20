@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".controller.TesteTabbed">
+
+    <ImageView
+        android:id="@+id/imgBackgroundQuadra"
+        android:layout_width="match_parent"
+        android:layout_height="180dp"
+        android:scaleType="fitXY"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/gray_bg"
+        tools:ignore="MissingConstraints" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/llInfoQuadra"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imgBackgroundQuadra"
+        tools:layout_editor_absoluteY="200dp">
+
+        <TextView
+            android:id="@+id/lblNomeQuadra"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:text="QUADRA XXX"
+            android:textColor="#47525E"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="@+id/llInfoQuadra"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/lblEnderecoQuadra"
+            android:layout_width="wrap_content"
+            android:layout_height="25dp"
+            android:layout_marginStart="8dp"
+            android:clickable="true"
+            android:text="📍 Centro - Caxias do Sul"
+            android:textColor="#8492A6"
+            app:layout_constraintStart_toStartOf="@+id/llInfoQuadra"
+            app:layout_constraintTop_toBottomOf="@+id/lblNomeQuadra" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appBarLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/Theme.SportScheduleApp.AppBarOverlay"
+        app:layout_constraintTop_toBottomOf="@+id/llInfoQuadra">
+
+        <com.google.android.material.tabs.TabLayout
+            android:id="@+id/tabs"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/view_pager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="288dp"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        app:layout_constraintTop_toBottomOf="@+id/appBarLayout">
+
+    </androidx.viewpager.widget.ViewPager>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

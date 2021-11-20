@@ -21,4 +21,8 @@ public class Alerts {
         Toast.makeText(tela.getApplicationContext(), tpFile + " não encontrado(a)!", Toast.LENGTH_SHORT).show();
     }
 
+    public static void toastRequiredPostService(Activity tela) {
+        Toast.makeText(tela.getApplicationContext(), "Para começar, insira o CEP.", Toast.LENGTH_SHORT).show();
+    }
+
 }

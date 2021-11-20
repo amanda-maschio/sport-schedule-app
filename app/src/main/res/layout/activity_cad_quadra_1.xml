@@ -27,11 +27,11 @@
                 android:id="@+id/txtNome"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
+                android:background="@color/required_field_color"
                 android:ems="10"
                 android:hint="Nome"
                 android:importantForAutofill="no"
                 android:inputType="text"
-                android:background="@color/required_field_color"
                 tools:targetApi="o" />
         </com.google.android.material.textfield.TextInputLayout>
 
@@ -39,11 +39,11 @@
             android:id="@+id/lblEndereco"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
             android:gravity="center"
             android:text="ENDEREÇO"
             android:textSize="15dp"
             android:textStyle="bold"
-            android:layout_marginTop="5dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
@@ -66,11 +66,11 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_marginTop="3dp"
+                android:background="@color/required_field_color"
                 android:ems="10"
                 android:hint="Rua"
                 android:importantForAutofill="no"
                 android:inputType="text"
-                android:background="@color/required_field_color"
                 tools:targetApi="o" />
         </com.google.android.material.textfield.TextInputLayout>
 
@@ -90,11 +90,11 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_marginTop="3dp"
+                android:background="@color/required_field_color"
                 android:ems="10"
                 android:hint="Bairro"
                 android:importantForAutofill="no"
                 android:inputType="text"
-                android:background="@color/required_field_color"
                 tools:targetApi="o" />
         </com.google.android.material.textfield.TextInputLayout>
 
@@ -113,11 +113,11 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_marginTop="3dp"
+                android:background="@color/required_field_color"
                 android:ems="10"
                 android:hint="Nº"
                 android:importantForAutofill="no"
                 android:inputType="text"
-                android:background="@color/required_field_color"
                 tools:targetApi="o" />
         </com.google.android.material.textfield.TextInputLayout>
 
@@ -127,8 +127,8 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="5dp"
             android:layout_marginEnd="24dp"
-            app:layout_constraintStart_toEndOf="@+id/layoutNumero"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/layoutNumero"
             app:layout_constraintTop_toBottomOf="@+id/layoutBairro">
 
             <EditText
@@ -136,12 +136,13 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_marginTop="3dp"
+                android:background="@color/required_field_color"
                 android:ems="10"
                 android:hint="CEP"
                 android:importantForAutofill="no"
                 android:inputType="text"
-                android:background="@color/required_field_color"
                 tools:targetApi="o" />
+
             <requestFocus />
         </com.google.android.material.textfield.TextInputLayout>
 
@@ -161,11 +162,11 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_marginTop="3dp"
+                android:background="@color/required_field_color"
                 android:ems="10"
                 android:hint="Cidade"
                 android:importantForAutofill="no"
                 android:inputType="text"
-                android:background="@color/required_field_color"
                 tools:targetApi="o" />
         </com.google.android.material.textfield.TextInputLayout>
 
@@ -183,21 +184,20 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_marginTop="3dp"
+                android:background="@color/required_field_color"
                 android:hint="UF"
                 android:importantForAutofill="no"
                 android:inputType="text"
-                android:background="@color/required_field_color"
                 tools:targetApi="o" />
         </com.google.android.material.textfield.TextInputLayout>
-
 
 
         <TextView
             android:id="@+id/lblObs"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:gravity="center"
             android:layout_marginTop="5dp"
+            android:gravity="center"
             android:text="OBSERVAÇÕES GERAIS"
             android:textSize="15dp"
             android:textStyle="bold"
@@ -224,23 +224,23 @@
                 android:layout_height="match_parent"
                 android:layout_marginTop="3dp"
                 android:ems="10"
+                android:gravity="start"
                 android:importantForAutofill="no"
                 android:inputType="textMultiLine"
                 android:lines="2"
                 android:maxLines="5"
-                android:gravity="start"
-                tools:targetApi="o"/>
+                tools:targetApi="o" />
         </com.google.android.material.textfield.TextInputLayout>
 
         <Button
             android:id="@+id/btnProximo"
-            android:text="PRÓXIMO"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
             android:layout_marginEnd="16dp"
             android:layout_marginBottom="16dp"
             android:backgroundTint="@color/project_button_color"
+            android:text="PRÓXIMO"
             android:textSize="11dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"

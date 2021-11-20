@@ -46,7 +46,6 @@ public class HomeLocatario extends AppCompatActivity {
                 startActivity(telaPerfil);
             }
         });
-
     }
 
 }

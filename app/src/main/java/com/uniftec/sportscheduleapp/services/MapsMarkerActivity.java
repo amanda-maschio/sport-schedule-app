@@ -13,7 +13,6 @@ package com.uniftec.sportscheduleapp.services;
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -26,9 +25,6 @@ import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.MarkerOptions;
 import com.uniftec.sportscheduleapp.R;
 import com.uniftec.sportscheduleapp.entities.Endereco;
-import com.uniftec.sportscheduleapp.utils.Utils;
-
-import org.json.JSONObject;
 
 /**
  * An activity that displays a Google map with a marker (pin) to indicate a particular location.
@@ -47,8 +43,6 @@ public class MapsMarkerActivity extends AppCompatActivity
 
         Endereco endereco = (Endereco) getIntent().getSerializableExtra("endereco");
 
-        JSONObject json = AddressService.getAddressCoordinates(endereco);
-        Utils.getLatLong(json, endereco);
         lat = endereco.getLatitude();
         lng = endereco.getLongitude();
         strEndereco = endereco.getLogradouro() + ", " + endereco.getBairro() + " - " + endereco.getLocalidade() + " / " + endereco.getUf();

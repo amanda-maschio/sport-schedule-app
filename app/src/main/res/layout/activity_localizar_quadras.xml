@@ -22,80 +22,44 @@
     </SearchView>
 
     <LinearLayout
+        android:id="@+id/quadraSearch"
         android:layout_width="match_parent"
-        android:layout_height="400dp"
-        android:gravity="center|top"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:background="@drawable/canto_redondo"
+        android:backgroundTint="@color/white"
+        android:orientation="vertical"
         app:layout_constraintTop_toBottomOf="@+id/svLocalizarQuadra">
 
-        <com.google.android.material.card.MaterialCardView
-            android:id="@+id/card_view"
-            android:layout_width="150dp"
-            android:layout_height="150dp"
-            android:layout_marginStart="5dp"
-            android:layout_marginTop="50dp"
-            android:layout_marginRight="5dp"
-            android:theme="@style/Theme.MaterialComponents.DayNight"
-            app:cardBackgroundColor="@color/white"
-            app:cardCornerRadius="5dp"
-            app:cardPreventCornerOverlap="false"
-            app:strokeColor="@color/project_search_bar"
-            app:strokeWidth="1dp">
+        <ImageView
+            android:id="@+id/imagemQuadra"
+            android:layout_width="match_parent"
+            android:layout_height="180dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:srcCompat="@drawable/quadra_exemplo_2"
+            tools:ignore="MissingConstraints" />
 
-            <ImageView
-                android:id="@+id/imageView"
-                android:layout_width="match_parent"
-                android:layout_height="110dp"
-                android:layout_gravity="start"
-                android:adjustViewBounds="true"
-                android:scaleType="fitXY"
-                app:srcCompat="@drawable/quadra_exemplo" />
+        <TextView
+            android:id="@+id/nomeQuadra"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:gravity="center"
+            android:text="QUADRA XXX"
+            android:textColor="@color/project_text_secondary_color"
+            android:textSize="25dp"
+            android:textStyle="bold" />
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="bottom"
-                android:layout_marginStart="3dp"
-                android:layout_marginTop="20dp"
-                android:layout_marginEnd="3dp"
-                android:text="Quadra XXX\nBairro - Cidade Y   R$50,00"
-                android:textColor="@color/project_search_bar"
-                android:textSize="12dp" />
-
-        </com.google.android.material.card.MaterialCardView>
-
-        <com.google.android.material.card.MaterialCardView
-            android:id="@+id/card_view2"
-            android:layout_width="150dp"
-            android:layout_height="150dp"
-            android:layout_marginStart="5dp"
-            android:layout_marginTop="50dp"
-            android:layout_marginRight="5dp"
-            android:theme="@style/Theme.MaterialComponents.DayNight"
-            app:cardBackgroundColor="@color/white"
-            app:cardCornerRadius="5dp"
-            app:cardPreventCornerOverlap="false"
-            app:strokeColor="@color/project_search_bar"
-            app:strokeWidth="1dp">
-
-            <ImageView
-                android:id="@+id/imageView2"
-                android:layout_width="match_parent"
-                android:layout_height="110dp"
-                android:layout_gravity="start"
-                android:adjustViewBounds="true"
-                android:scaleType="fitXY"
-                app:srcCompat="@drawable/quadra_exemplo_2" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="bottom"
-                android:layout_marginStart="3dp"
-                android:layout_marginTop="20dp"
-                android:text="Quadra XXX\nBairro - Cidade Y    R$60,00"
-                android:textColor="@color/project_search_bar"
-                android:textSize="12dp" />
-        </com.google.android.material.card.MaterialCardView>
+        <TextView
+            android:id="@+id/enderecoQuadra"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:gravity="center"
+            android:text="Centro - Caxias do Sul"
+            android:textColor="@color/project_text_secondary_color" />
 
     </LinearLayout>
+
 </androidx.constraintlayout.widget.ConstraintLayout>

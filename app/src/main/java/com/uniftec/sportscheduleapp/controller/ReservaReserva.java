@@ -14,7 +14,8 @@ public class ReservaReserva extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedIntanceState) {
 
-        View view = inflater.inflate(R.layout.fragment_reserva_reserva, null);
+        View view = inflater.inflate(R.layout.fragment_reserva_reserva, container, false);
         return view;
     }
+
 }

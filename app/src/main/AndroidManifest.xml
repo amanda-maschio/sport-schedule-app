@@ -3,34 +3,40 @@
     xmlns:tools="http://schemas.android.com/tools"
     package="com.uniftec.sportscheduleapp">
 
-    <uses-permission android:name="Android.permission.ACCESS_COARSE_LOCATION"/>
-    <uses-permission android:name="android.permission.INTERNET"/>
-    <uses-permission android:name="android.permission.CAMERA"/>
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
-    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
-    <uses-feature android:name="android.hardware.camera" android:required="true" />
+    <uses-permission android:name="Android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="true" />
 
     <application
-
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="Sport Schedule"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.SportScheduleApp">
+        <activity
+            android:name=".controller.TesteTabbed"
+            android:exported="false"
+            android:label="@string/title_activity_teste_tabbed"
+            android:theme="@style/Theme.SportScheduleApp.NoActionBar" />
 
         <meta-data
             android:name="com.google.android.gms.version"
             android:value="@integer/google_play_services_version" />
-
         <meta-data
             android:name="com.google.android.geo.API_KEY"
             android:value="AIzaSyCkkFiizKlv61YWwfSaANVpXrngZoIUCNc" />
 
         <activity
             android:name=".controller.ListaQuadrasCadastradas"
-            android:label="Minhas Quadras"
             android:exported="true"
+            android:label="Minhas Quadras"
             android:parentActivityName=".controller.HomeLocador" />
         <activity
             android:name=".controller.Splash"
@@ -76,38 +82,34 @@
         <activity
             android:name=".controller.HomeLocatario"
             android:exported="true"
-            android:theme="@style/Theme.AppCompat.NoActionBar"/>
+            android:theme="@style/Theme.AppCompat.NoActionBar" />
         <activity
             android:name=".controller.HomeLocador"
             android:exported="true"
-            android:theme="@style/Theme.AppCompat.NoActionBar"/>
+            android:theme="@style/Theme.AppCompat.NoActionBar" />
         <activity
             android:name=".controller.Perfil"
             android:exported="true"
-            android:theme="@style/Theme.AppCompat.NoActionBar"/>
+            android:theme="@style/Theme.AppCompat.NoActionBar" />
         <activity
             android:name=".controller.CadastroLocador"
+            android:exported="true"
             android:label="Cadastro"
-            android:parentActivityName=".controller.BemVindo"
-            android:exported="true"/>
+            android:parentActivityName=".controller.BemVindo" />
         <activity
             android:name=".controller.CadastroLocatario"
+            android:exported="true"
             android:label="Cadastro"
-            android:parentActivityName=".controller.BemVindo"
-            android:exported="true" />
+            android:parentActivityName=".controller.BemVindo" />
         <activity
             android:name=".controller.Quadra"
             android:exported="true"
-            android:theme="@style/Theme.AppCompat.NoActionBar"/>
-        <activity
-            android:name=".controller.Reserva"
-            android:exported="true"
-            android:theme="@style/Theme.AppCompat.NoActionBar"/>
+            android:theme="@style/Theme.AppCompat.NoActionBar" />
         <activity
             android:name=".services.MapsMarkerActivity"
-            android:label="Mapa"
-            android:parentActivityName=".controller.Reserva"
-            android:exported="true"/>
+            android:exported="true"
+            android:label="Localização"
+            android:parentActivityName=".controller.Reserva" />
     </application>
 
 </manifest>

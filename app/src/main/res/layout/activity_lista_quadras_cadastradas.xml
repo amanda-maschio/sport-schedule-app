@@ -8,6 +8,7 @@
 
 
     <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/listaQuadras"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_marginTop="8dp"
@@ -15,8 +16,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:id="@+id/listaQuadras"/>
+        app:layout_constraintTop_toTopOf="parent" />
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/adicionarQuadra"
@@ -25,10 +25,10 @@
         android:layout_marginEnd="24dp"
         android:layout_marginBottom="24dp"
         android:clickable="true"
-        app:tint="@color/white"
         app:backgroundTint="@color/project_primary_color"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:srcCompat="@drawable/ic_baseline_add_24" />
+        app:srcCompat="@drawable/ic_baseline_add_24"
+        app:tint="@color/white" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

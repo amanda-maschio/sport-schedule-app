@@ -2,9 +2,9 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:background="@color/white"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="@color/white">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/constraintLayout7"
@@ -71,9 +71,9 @@
         android:layout_width="200dp"
         android:layout_height="45dp"
         android:backgroundTint="@color/project_button_color"
+        android:onClick="btnLocador"
         android:text="LOCADOR"
         android:textSize="11dp"
-        android:onClick="btnLocador"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

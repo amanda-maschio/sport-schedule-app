@@ -27,5 +27,10 @@
         <item>Bolas de Futsal</item>
         <item>Cones de PVC</item>
     </string-array>
+    <string name="title_activity_reserva_new">ReservaNew</string>
+    <string name="tab_text_1">INFO</string>
+    <string name="tab_text_2">RESERVA</string>
+    <string name="title_activity_teste">Teste</string>
+    <string name="title_activity_teste_tabbed">TesteTabbed</string>
 
 </resources>
