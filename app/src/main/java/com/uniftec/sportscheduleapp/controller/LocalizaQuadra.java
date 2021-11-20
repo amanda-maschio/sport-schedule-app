@@ -7,6 +7,7 @@ import android.widget.LinearLayout;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.google.android.material.card.MaterialCardView;
 import com.uniftec.sportscheduleapp.R;
 
 public class LocalizaQuadra extends AppCompatActivity {
