@@ -6,11 +6,23 @@
     android:layout_height="match_parent"
     android:background="@color/white">
 
+    <ImageView
+        android:id="@+id/imagemPerfil"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="27dp"
+        android:onClick="selectImageClick"
+        android:src="@android:drawable/ic_input_add"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/layoutNome"
+        app:layout_constraintTop_toTopOf="parent" />
+
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/layoutEmail"
-        android:layout_width="match_parent"
+        android:layout_width="0dp"
         android:layout_height="52dp"
-        android:layout_marginStart="24dp"
+        android:layout_marginStart="135dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="24dp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -27,7 +39,6 @@
             android:importantForAutofill="no"
             android:inputType="textEmailAddress"
             tools:targetApi="o" />
-
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
@@ -83,15 +94,16 @@
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/layoutNome"
-        android:layout_width="match_parent"
+        android:layout_width="0dp"
         android:layout_height="52dp"
-        android:layout_marginStart="24dp"
+        android:layout_marginStart="135dp"
+        android:layout_marginTop="8dp"
         android:layout_marginEnd="24dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.060000002">
+        app:layout_constraintVertical_bias="0.01999998">
 
         <EditText
             android:id="@+id/txtNome"

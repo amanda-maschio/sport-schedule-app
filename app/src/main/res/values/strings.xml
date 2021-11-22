@@ -32,5 +32,6 @@
     <string name="tab_text_2">RESERVA</string>
     <string name="title_activity_teste">Teste</string>
     <string name="title_activity_teste_tabbed">TesteTabbed</string>
+    <string name="select_picture_title">Teste</string>
 
 </resources>

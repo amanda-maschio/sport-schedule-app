@@ -3,6 +3,7 @@ package com.uniftec.sportscheduleapp.controller;
 import android.Manifest;
 import android.content.Intent;
 import android.content.pm.PackageManager;
+import android.database.Cursor;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.net.Uri;
@@ -28,6 +29,7 @@ import java.io.IOException;
 public class CadastroQuadra3 extends AppCompatActivity implements View.OnClickListener {
 
     String aux = "";
+    private static int RESULT_LOAD_IMAGE = 1;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -77,22 +79,19 @@ public class CadastroQuadra3 extends AppCompatActivity implements View.OnClickLi
 
     }
 
-    static final int REQUEST_IMAGE_CAPTURE = 1;
-    static final int REQUEST_TAKE_PHOTO = 1;
-    static String mCurrentPhotoPath;
-
     private void getPermissions() {
         if (ActivityCompat.checkSelfPermission(this, Manifest.permission.CAMERA) != PackageManager.PERMISSION_GRANTED
                 || ActivityCompat.checkSelfPermission(this, Manifest.permission.WRITE_EXTERNAL_STORAGE) != PackageManager.PERMISSION_GRANTED
                 || ActivityCompat.checkSelfPermission(this, Manifest.permission.READ_EXTERNAL_STORAGE) != PackageManager.PERMISSION_GRANTED) {
-            ActivityCompat.requestPermissions(this, new String[]{Manifest.permission.CAMERA, Manifest.permission.WRITE_EXTERNAL_STORAGE, Manifest.permission.READ_EXTERNAL_STORAGE}, 1);
         } else
             dispatchTakePictureIntent();
     }
 
     @Override
     public void onRequestPermissionsResult(int requestCode, String permissions[], int[] grantResults) {
+
         super.onRequestPermissionsResult(requestCode, permissions, grantResults);
+
         switch (requestCode) {
             case 1: {
                 if (grantResults.length > 0 && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
@@ -107,48 +106,37 @@ public class CadastroQuadra3 extends AppCompatActivity implements View.OnClickLi
 
     private void dispatchTakePictureIntent() {
 
-        Intent takePictureIntent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
-        if (takePictureIntent.resolveActivity(getPackageManager()) != null) {
-            File photoFile = null;
-            try {
-                File storageDir = Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_PICTURES);
-                photoFile = File.createTempFile("PHOTOAPP", ".jpg", storageDir);
-                mCurrentPhotoPath = "file:" + photoFile.getAbsolutePath();
-            } catch (IOException ex) {
-                ex.printStackTrace();
-                Alerts.genericErrorInOut(CadastroQuadra3.this);
-            }
-
-            if (photoFile != null) {
-                takePictureIntent.putExtra(MediaStore.EXTRA_OUTPUT, Uri.fromFile(photoFile));
-                startActivityForResult(takePictureIntent, REQUEST_TAKE_PHOTO);
-            }
-        }
+        Intent i = new Intent(Intent.ACTION_PICK, android.provider.MediaStore.Images.Media.EXTERNAL_CONTENT_URI);
+        startActivityForResult(i, RESULT_LOAD_IMAGE);
     }
 
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+
         super.onActivityResult(requestCode, resultCode, data);
-        if (requestCode == REQUEST_IMAGE_CAPTURE && resultCode == RESULT_OK) {
-            try {
-                String imageViewId = "imageView" + aux;
-                int resultImgID = getResources().getIdentifier(imageViewId, "id", getPackageName());
 
-                ImageView imagem = (ImageView) findViewById(resultImgID);
-                Bitmap bm1 = BitmapFactory.decodeStream(getContentResolver().openInputStream(Uri.parse(mCurrentPhotoPath)));
-                imagem.setImageBitmap(bm1);
+        if (requestCode == RESULT_LOAD_IMAGE && resultCode == RESULT_OK) {
 
-                String imageButtonId = "imageButton" + aux;
-                int resultBtnID = getResources().getIdentifier(imageButtonId, "id", getPackageName());
+            String imageViewId = "imageView" + aux;
+            int resultImgID = getResources().getIdentifier(imageViewId, "id", getPackageName());
 
-                ImageButton button = (ImageButton) findViewById(resultBtnID);
-                button.setVisibility(View.INVISIBLE);
-                aux = "";
+            Uri selectedImage = data.getData();
+            String[] filePathColumn = {MediaStore.Images.Media.DATA};
+            Cursor cursor = getContentResolver().query(selectedImage, filePathColumn, null, null, null);
+            cursor.moveToFirst();
+            int columnIndex = cursor.getColumnIndex(filePathColumn[0]);
+            String picturePath = cursor.getString(columnIndex);
+            cursor.close();
+            ImageView imageView = (ImageView) findViewById(resultImgID);
+            imageView.setImageBitmap(BitmapFactory.decodeFile(picturePath));
 
-            } catch (FileNotFoundException fnex) {
-                fnex.printStackTrace();
-                Alerts.genericErrorFileNotFound(CadastroQuadra3.this, "Imagem");
-            }
+            String imageButtonId = "imageButton" + aux;
+            int resultBtnID = getResources().getIdentifier(imageButtonId, "id", getPackageName());
+
+            ImageButton button = (ImageButton) findViewById(resultBtnID);
+            button.setVisibility(View.INVISIBLE);
+            aux = "";
+
         }
     }
 
@@ -207,5 +195,4 @@ public class CadastroQuadra3 extends AppCompatActivity implements View.OnClickLi
     protected Quadra ObjQuadra() {
         return new Quadra();
     }
-
 }
