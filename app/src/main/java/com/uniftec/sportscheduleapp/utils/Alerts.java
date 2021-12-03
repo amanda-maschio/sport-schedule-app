@@ -25,4 +25,16 @@ public class Alerts {
         Toast.makeText(tela.getApplicationContext(), "Para começar, insira o CEP.", Toast.LENGTH_SHORT).show();
     }
 
+    public static void userNotFound(Activity tela) {
+        Toast.makeText(tela.getApplicationContext(), "Usuário ou senha incorretas!", Toast.LENGTH_SHORT).show();
+    }
+
+    public static void verifyLicenseTerms(Activity tela) {
+        Toast.makeText(tela.getApplicationContext(), "É necessário concordar com os Termos de Contrato!", Toast.LENGTH_SHORT).show();
+    }
+
+    public static void registrationError(Activity tela) {
+        Toast.makeText(tela.getApplicationContext(), "Ocorreu um erro inesperado ao cadastrar!", Toast.LENGTH_SHORT).show();
+    }
+
 }

@@ -4,11 +4,9 @@ import android.Manifest;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.database.Cursor;
-import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.net.Uri;
 import android.os.Bundle;
-import android.os.Environment;
 import android.provider.MediaStore;
 import android.view.View;
 import android.widget.Button;
@@ -21,10 +19,6 @@ import androidx.core.app.ActivityCompat;
 import com.uniftec.sportscheduleapp.R;
 import com.uniftec.sportscheduleapp.entities.Quadra;
 import com.uniftec.sportscheduleapp.utils.Alerts;
-
-import java.io.File;
-import java.io.FileNotFoundException;
-import java.io.IOException;
 
 public class CadastroQuadra3 extends AppCompatActivity implements View.OnClickListener {
 
@@ -80,9 +74,10 @@ public class CadastroQuadra3 extends AppCompatActivity implements View.OnClickLi
     }
 
     private void getPermissions() {
-        if (ActivityCompat.checkSelfPermission(this, Manifest.permission.CAMERA) != PackageManager.PERMISSION_GRANTED
+        if (ActivityCompat.checkSelfPermission(this, Manifest.permission.READ_EXTERNAL_STORAGE) != PackageManager.PERMISSION_GRANTED
                 || ActivityCompat.checkSelfPermission(this, Manifest.permission.WRITE_EXTERNAL_STORAGE) != PackageManager.PERMISSION_GRANTED
-                || ActivityCompat.checkSelfPermission(this, Manifest.permission.READ_EXTERNAL_STORAGE) != PackageManager.PERMISSION_GRANTED) {
+                || ActivityCompat.checkSelfPermission(this, Manifest.permission.MANAGE_EXTERNAL_STORAGE) != PackageManager.PERMISSION_GRANTED) {
+            ActivityCompat.requestPermissions(this, new String[]{Manifest.permission.READ_EXTERNAL_STORAGE, Manifest.permission.WRITE_EXTERNAL_STORAGE, Manifest.permission.MANAGE_EXTERNAL_STORAGE}, 1);
         } else
             dispatchTakePictureIntent();
     }

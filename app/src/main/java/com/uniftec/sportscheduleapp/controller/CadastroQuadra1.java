@@ -61,6 +61,7 @@ public class CadastroQuadra1 extends AppCompatActivity {
                 }
             }
         });
+
     }
 
     public void onActivityResult(int requestCode, int resultCode, Intent data) {

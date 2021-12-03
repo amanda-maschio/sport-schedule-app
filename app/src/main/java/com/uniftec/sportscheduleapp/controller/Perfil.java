@@ -1,6 +1,6 @@
 package com.uniftec.sportscheduleapp.controller;
 
-import android.os.AsyncTask;
+import android.graphics.BitmapFactory;
 import android.os.Bundle;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -9,47 +9,37 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.uniftec.sportscheduleapp.R;
 import com.uniftec.sportscheduleapp.entities.Usuario;
-import com.uniftec.sportscheduleapp.services.UsuarioServico;
+import com.uniftec.sportscheduleapp.utils.SingletonUsuario;
 
 public class Perfil extends AppCompatActivity {
 
-    private TextView nomeCompleto;
+    private TextView nome;
     private TextView email;
-    private ImageView foto;
-    private Usuario usuarioRandom;
+    private TextView tpUsuario;
+    private ImageView imagemPerfil;
+    private Usuario usuario;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_perfil);
 
-        nomeCompleto = (TextView) findViewById(R.id.textView6);
-        email = (TextView) findViewById(R.id.textView8);
-        foto = (ImageView) findViewById(R.id.imageView1);
+        usuario = SingletonUsuario.getInstance().getUsuario();
 
-        GetJson gj = new GetJson();
-        gj.execute();
-    }
+        nome = (TextView) findViewById(R.id.txtNome);
+        email = (TextView) findViewById(R.id.txtEmail);
+        tpUsuario = (TextView) findViewById(R.id.txtTpUsuario);
+        imagemPerfil = (ImageView) findViewById(R.id.imagemPerfil);
 
-    public void populateUserFields(Usuario usuario) {
-
-        nomeCompleto.setText(usuario.getPessoa().getNome() + " " + usuario.getPessoa().getSobrenome());
+        nome.setText(usuario.getPessoa().getNome());
         email.setText(usuario.getEmail());
-        foto.setImageBitmap(usuario.getPessoa().getFoto());
-        usuarioRandom = usuario;
 
+        if (usuario.getIndTipoUsuario().equals("LD")) {
+            tpUsuario.setText("Usuário Locador");
+        } else {
+            tpUsuario.setText("Usuário Locatário");
+        }
+        imagemPerfil.setImageBitmap(BitmapFactory.decodeByteArray(usuario.getPessoa().getFoto(), 0, usuario.getPessoa().getFoto().length));
     }
 
-    private class GetJson extends AsyncTask<Void, Void, Usuario> {
-
-        @Override
-        protected Usuario doInBackground(Void... voids) {
-            return UsuarioServico.getRandomUser("https://randomuser.me/api/");
-        }
-
-        @Override
-        protected void onPostExecute(Usuario usuario) {
-            populateUserFields(usuario);
-        }
-    }
 }
