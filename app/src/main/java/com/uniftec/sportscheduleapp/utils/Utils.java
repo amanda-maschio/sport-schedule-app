@@ -1,6 +1,8 @@
 package com.uniftec.sportscheduleapp.utils;
 
+import android.graphics.Bitmap;
 import android.widget.EditText;
+import android.widget.ImageView;
 
 import com.uniftec.sportscheduleapp.entities.Endereco;
 
@@ -9,6 +11,7 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.io.BufferedReader;
+import java.io.ByteArrayOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
@@ -22,6 +25,7 @@ public class Utils {
 
     /**
      * Método utilitário para validar os campos obrigatórios em tela
+     *
      * @param list
      * @return
      */
@@ -45,6 +49,7 @@ public class Utils {
 
     /**
      * Método utilitário que recebe de parâmetro os campos que deverão ser obrigatórios e retorna uma lista
+     *
      * @param texts
      * @return
      */
@@ -52,7 +57,7 @@ public class Utils {
 
         List<EditText> listRequiredFields = new ArrayList<EditText>();
 
-        for (EditText text : texts){
+        for (EditText text : texts) {
             listRequiredFields.add(text);
         }
 
@@ -61,6 +66,7 @@ public class Utils {
 
     /**
      * Método responsável por retornar a latitude e longitude de determinado endereço.
+     *
      * @param json
      * @return
      */
@@ -90,7 +96,7 @@ public class Utils {
         return endereco;
     }
 
-    public static String getJsonFromApi(String url){
+    public static String getJsonFromApi(String url) {
 
         String retorno = "";
 
@@ -108,48 +114,58 @@ public class Utils {
             conexao.connect();
 
             codigoResposta = conexao.getResponseCode();
-            
-            if(codigoResposta < HttpURLConnection.HTTP_BAD_REQUEST){
+
+            if (codigoResposta < HttpURLConnection.HTTP_BAD_REQUEST) {
                 is = conexao.getInputStream();
-            }else{
-               return null;
+            } else {
+                return null;
             }
 
             retorno = converterInputStreamToString(is);
             is.close();
             conexao.disconnect();
 
-            if(retorno.equals("{  \"erro\": true}")){
+            if (retorno.equals("{  \"erro\": true}")) {
                 return null;
             }
         } catch (MalformedURLException e) {
             e.printStackTrace();
-        }catch (IOException e){
+        } catch (IOException e) {
             e.printStackTrace();
         }
 
         return retorno;
     }
 
-    private static String converterInputStreamToString(InputStream is){
+    private static String converterInputStreamToString(InputStream is) {
         StringBuffer buffer = new StringBuffer();
-        try{
+        try {
             BufferedReader br;
             String linha;
 
             br = new BufferedReader(new InputStreamReader(is));
-            while((linha = br.readLine())!=null){
+            while ((linha = br.readLine()) != null) {
                 buffer.append(linha);
             }
 
             br.close();
-        }catch(IOException e){
+        } catch (IOException e) {
             e.printStackTrace();
         }
 
         return buffer.toString();
     }
 
+    public static byte[] imageToByteArray(ImageView imageView){
 
+        imageView.buildDrawingCache();
+        Bitmap bmap = imageView.getDrawingCache();
+        ByteArrayOutputStream stream = new ByteArrayOutputStream();
+        bmap.compress(Bitmap.CompressFormat.PNG, 100, stream);
+        byte[] byteArray = stream.toByteArray();
+        bmap.recycle();
+
+        return byteArray;
+    }
 
 }

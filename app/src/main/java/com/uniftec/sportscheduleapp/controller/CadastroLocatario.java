@@ -1,17 +1,19 @@
 package com.uniftec.sportscheduleapp.controller;
 
 import android.Manifest;
+import android.app.DatePickerDialog;
 import android.content.Intent;
 import android.content.pm.PackageManager;
+import android.content.res.Configuration;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteException;
-import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.net.Uri;
 import android.os.Bundle;
 import android.provider.MediaStore;
 import android.view.View;
 import android.widget.Button;
+import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.RadioButton;
@@ -27,8 +29,9 @@ import com.uniftec.sportscheduleapp.repository.UsuarioRepository;
 import com.uniftec.sportscheduleapp.utils.Alerts;
 import com.uniftec.sportscheduleapp.utils.Utils;
 
-import java.io.ByteArrayOutputStream;
+import java.util.Calendar;
 import java.util.List;
+import java.util.Locale;
 
 public class CadastroLocatario extends AppCompatActivity {
 
@@ -42,10 +45,14 @@ public class CadastroLocatario extends AppCompatActivity {
     ImageView imagemPerfil;
     RadioButton rbConcordo;
 
+    DatePickerDialog datePickerDialogDataNascimento;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_cadastro_locatario);
+
+        this.localization();
 
         txtNome = (EditText) findViewById(R.id.txtNome);
         txtEmail = (EditText) findViewById(R.id.txtEmail);
@@ -54,8 +61,11 @@ public class CadastroLocatario extends AppCompatActivity {
         txtData = (EditText) findViewById(R.id.txtData);
         rbConcordo = (RadioButton) findViewById(R.id.rbConcordo);
         imagemPerfil = (ImageView) findViewById(R.id.imagemPerfil);
+        imagemPerfil.setTag("default");
 
         List<EditText> listRequiredFields = Utils.determineMandatoryFields(txtNome, txtEmail, txtSenha, txtCpf);
+
+        this.createDateEvent();
 
         Button btnCadastrar = (Button) findViewById(R.id.btnCadastrar);
         ImageView imagemPerfil = (ImageView) findViewById(R.id.imagemPerfil);
@@ -139,23 +149,23 @@ public class CadastroLocatario extends AppCompatActivity {
             cursor.close();
             ImageView imageView = (ImageView) findViewById(R.id.imagemPerfil);
             imageView.setImageBitmap(BitmapFactory.decodeFile(picturePath));
+            imagemPerfil.setTag("other");
         }
     }
 
     private void CadastrarUsuarioPessoa() throws SQLiteException {
 
-        imagemPerfil.buildDrawingCache();
-        Bitmap bmap = imagemPerfil.getDrawingCache();
-        ByteArrayOutputStream stream = new ByteArrayOutputStream();
-        bmap.compress(Bitmap.CompressFormat.PNG, 100, stream);
-        byte[] byteArray = stream.toByteArray();
-        bmap.recycle();
-
         Pessoa pessoaLocatario = new Pessoa();
+
+        if (imagemPerfil.getTag().equals("other")) {
+            pessoaLocatario.setFoto(Utils.imageToByteArray(imagemPerfil));
+        } else {
+            pessoaLocatario.setFoto(null);
+        }
+
         pessoaLocatario.setNome(txtNome.getText().toString().trim());
         pessoaLocatario.setCpf(txtCpf.getText().toString().trim());
         pessoaLocatario.setDataNascimento(txtData.getText().toString().trim());
-        pessoaLocatario.setFoto(byteArray);
         long pessoaLocadorId = new PessoaRepository(CadastroLocatario.this).insert(pessoaLocatario);
 
         Usuario usuarioLocatario = new Usuario();
@@ -164,6 +174,49 @@ public class CadastroLocatario extends AppCompatActivity {
         usuarioLocatario.setSenha(txtSenha.getText().toString().trim());
         usuarioLocatario.setIndTipoUsuario("LT");
         new UsuarioRepository(CadastroLocatario.this).insert(usuarioLocatario);
+    }
+
+    private void localization() {
+        Locale locale = new Locale("pt", "BR");
+        Locale.setDefault(locale);
+        Configuration config = new Configuration();
+        config.locale = locale;
+        getApplicationContext().getResources().updateConfiguration(config, null);
+    }
+
+    private void createDateEvent() {
+
+        final Calendar calendarDataAtual = Calendar.getInstance();
+        int anoAtual = calendarDataAtual.get(Calendar.YEAR);
+        int mesAtual = calendarDataAtual.get(Calendar.MONTH);
+        int diaAtual = calendarDataAtual.get(Calendar.DAY_OF_MONTH);
+
+        datePickerDialogDataNascimento = new DatePickerDialog(this, new DatePickerDialog.OnDateSetListener() {
+
+            @Override
+            public void onDateSet(DatePicker view, int anoSelecionado, int mesSelecionado, int diaSelecionado) {
+
+                String mes = (String.valueOf((mesSelecionado + 1)).length() == 1 ? "0" + (mesSelecionado + 1) : String.valueOf(mesSelecionado));
+                txtData.setText(diaSelecionado + "/" + mes + "/" + anoSelecionado);
+
+            }
+
+        }, anoAtual, mesAtual, diaAtual);
+
+        txtData.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
+                datePickerDialogDataNascimento.show();
+            }
+        });
+
+        txtData.setOnFocusChangeListener(new View.OnFocusChangeListener() {
+            @Override
+            public void onFocusChange(View v, boolean hasFocus) {
+                datePickerDialogDataNascimento.show();
+            }
+        });
     }
 
 }

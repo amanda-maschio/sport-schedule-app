@@ -110,6 +110,11 @@
             android:exported="true"
             android:label="Localização"
             android:parentActivityName=".controller.TesteTabbed" />
+        <activity
+            android:name=".controller.AlteraLocadorLocatario"
+            android:exported="true"
+            android:label="Alterar Cadastro"
+            android:parentActivityName=".controller.BemVindo" />
     </application>
 
 </manifest>

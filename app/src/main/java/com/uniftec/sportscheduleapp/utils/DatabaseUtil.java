@@ -6,6 +6,8 @@ import android.database.sqlite.SQLiteOpenHelper;
 
 public class DatabaseUtil extends SQLiteOpenHelper {
 
+    private static DatabaseUtil sInstance;
+
     private Context context;
     private static final String DATABASE_NAME = "sport_schedule.db";
     private static final int DATABASE_VERSION = 1;

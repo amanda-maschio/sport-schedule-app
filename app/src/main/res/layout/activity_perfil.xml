@@ -32,8 +32,10 @@
 
         <ImageButton
             android:id="@+id/btnEditar"
-            android:layout_width="50dp"
-            android:layout_height="50dp"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_marginEnd="10dp"
+            android:background="@color/project_bg_profile"
             android:clickable="true"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"

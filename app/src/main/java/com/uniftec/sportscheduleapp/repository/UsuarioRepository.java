@@ -19,30 +19,47 @@ public class UsuarioRepository {
         databaseUtil = new DatabaseUtil(context);
     }
 
-    public long insert(Usuario usuario) throws SQLiteException {
+    public Long insert(Usuario usuario) throws SQLiteException {
 
-        ContentValues contentValues = new ContentValues();
+        Long retorno = null;
 
-        contentValues.put("cod_pessoa", usuario.getPessoa().getCodPessoa());
-        contentValues.put("email", usuario.getEmail());
-        contentValues.put("senha", usuario.getSenha());
-        contentValues.put("ind_tp_usuario", usuario.getIndTipoUsuario());
+        try {
+            ContentValues contentValues = new ContentValues();
 
-        return databaseUtil.GetConexaoDataBase().insertOrThrow("usuario", null, contentValues);
+            contentValues.put("cod_pessoa", usuario.getPessoa().getCodPessoa());
+            contentValues.put("email", usuario.getEmail());
+            contentValues.put("senha", usuario.getSenha());
+            contentValues.put("ind_tp_usuario", usuario.getIndTipoUsuario());
+
+            retorno = databaseUtil.GetConexaoDataBase().insertOrThrow("usuario", null, contentValues);
+
+        } catch (SQLiteException e) {
+            e.printStackTrace();
+        } finally {
+            databaseUtil.close();
+        }
+
+        return retorno;
 
     }
 
     public void update(Usuario usuario) {
 
-        ContentValues contentValues = new ContentValues();
+        try {
+            ContentValues contentValues = new ContentValues();
 
-        contentValues.put("cod_pessoa", usuario.getPessoa().getCodPessoa());
-        contentValues.put("email", usuario.getEmail());
-        contentValues.put("senha", usuario.getSenha());
-        contentValues.put("ind_tp_usuario", usuario.getIndTipoUsuario());
+            contentValues.put("cod_pessoa", usuario.getPessoa().getCodPessoa());
+            contentValues.put("email", usuario.getEmail());
+            contentValues.put("senha", usuario.getSenha());
+            contentValues.put("ind_tp_usuario", usuario.getIndTipoUsuario());
 
-        databaseUtil.GetConexaoDataBase().update("usuario", contentValues, "cod_usuario = ?", new String[]{Integer.toString(usuario.getCodUsuario())});
+            databaseUtil.GetConexaoDataBase().update("usuario", contentValues, "cod_usuario = ?", new String[]{Integer.toString(usuario.getCodUsuario())});
 
+        } catch (SQLiteException e) {
+            e.printStackTrace();
+        } finally {
+            databaseUtil.close();
+        }
     }
 
     public Integer delete(int codigo) {
@@ -51,56 +68,68 @@ public class UsuarioRepository {
 
     public Usuario findById(int codigo) {
 
-        Cursor cursor = databaseUtil.GetConexaoDataBase().rawQuery("SELECT * FROM usuario WHERE cod_usuario =" + codigo, null);
-
-        cursor.moveToFirst();
-
         Usuario usuario = new Usuario();
 
-        usuario.setCodUsuario(cursor.getInt(cursor.getColumnIndex("cod_usuario")));
-        usuario.getPessoa().setCodPessoa(cursor.getInt(cursor.getColumnIndex("cod_pessoa")));
-        usuario.setEmail(cursor.getString(cursor.getColumnIndex("email")));
-        usuario.setSenha(cursor.getString(cursor.getColumnIndex("senha")));
-        usuario.setIndTipoUsuario(cursor.getString(cursor.getColumnIndex("ind_tp_usuario")));
+        try {
+            Cursor cursor = databaseUtil.GetConexaoDataBase().rawQuery("SELECT * FROM usuario WHERE cod_usuario =" + codigo, null);
+
+            cursor.moveToFirst();
+
+            usuario.setCodUsuario(cursor.getInt(cursor.getColumnIndex("cod_usuario")));
+            usuario.getPessoa().setCodPessoa(cursor.getInt(cursor.getColumnIndex("cod_pessoa")));
+            usuario.setEmail(cursor.getString(cursor.getColumnIndex("email")));
+            usuario.setSenha(cursor.getString(cursor.getColumnIndex("senha")));
+            usuario.setIndTipoUsuario(cursor.getString(cursor.getColumnIndex("ind_tp_usuario")));
+
+        } catch (SQLiteException e) {
+            e.printStackTrace();
+        } finally {
+            databaseUtil.close();
+        }
 
         return usuario;
-
     }
 
     public List<Usuario> findAll() {
 
         List<Usuario> listaUsuarios = new ArrayList<Usuario>();
 
-        StringBuilder stringBuilderQuery = new StringBuilder();
-        stringBuilderQuery.append("SELECT * ");
-        stringBuilderQuery.append("FROM usuario ");
-        stringBuilderQuery.append("INNER JOIN pessoa ON usuario.cod_pessoa = pessoa.cod_pessoa ");
-        stringBuilderQuery.append("ORDER BY cod_usuario ");
+        try {
+            StringBuilder stringBuilderQuery = new StringBuilder();
+            stringBuilderQuery.append("SELECT * ");
+            stringBuilderQuery.append("FROM usuario ");
+            stringBuilderQuery.append("INNER JOIN pessoa ON usuario.cod_pessoa = pessoa.cod_pessoa ");
+            stringBuilderQuery.append("ORDER BY cod_usuario ");
 
-        Cursor cursor = databaseUtil.GetConexaoDataBase().rawQuery(stringBuilderQuery.toString(), null);
-        cursor.moveToFirst();
+            Cursor cursor = databaseUtil.GetConexaoDataBase().rawQuery(stringBuilderQuery.toString(), null);
+            cursor.moveToFirst();
 
-        Usuario usuario;
+            Usuario usuario;
 
-        while (!cursor.isAfterLast()) {
+            while (!cursor.isAfterLast()) {
 
-            usuario = new Usuario();
+                usuario = new Usuario();
 
-            usuario.setCodUsuario(cursor.getInt(cursor.getColumnIndex("cod_usuario")));
-            usuario.getPessoa().setCodPessoa(cursor.getInt(cursor.getColumnIndex("cod_pessoa")));
-            usuario.getPessoa().setNome(cursor.getString(cursor.getColumnIndex("nome")));
-            usuario.getPessoa().setCpf(cursor.getString(cursor.getColumnIndex("cpf")));
-            usuario.getPessoa().setDataNascimento(cursor.getString(cursor.getColumnIndex("data_nascimento")));
-            usuario.getPessoa().setFoto(cursor.getBlob(cursor.getColumnIndex("foto")));
-            usuario.setEmail(cursor.getString(cursor.getColumnIndex("email")));
-            usuario.setSenha(cursor.getString(cursor.getColumnIndex("senha")));
-            usuario.setIndTipoUsuario(cursor.getString(cursor.getColumnIndex("ind_tp_usuario")));
+                usuario.setCodUsuario(cursor.getInt(cursor.getColumnIndex("cod_usuario")));
+                usuario.getPessoa().setCodPessoa(cursor.getInt(cursor.getColumnIndex("cod_pessoa")));
+                usuario.getPessoa().setNome(cursor.getString(cursor.getColumnIndex("nome")));
+                usuario.getPessoa().setCpf(cursor.getString(cursor.getColumnIndex("cpf")));
+                usuario.getPessoa().setDataNascimento(cursor.getString(cursor.getColumnIndex("data_nascimento")));
+                usuario.getPessoa().setFoto(cursor.getBlob(cursor.getColumnIndex("foto")));
+                usuario.setEmail(cursor.getString(cursor.getColumnIndex("email")));
+                usuario.setSenha(cursor.getString(cursor.getColumnIndex("senha")));
+                usuario.setIndTipoUsuario(cursor.getString(cursor.getColumnIndex("ind_tp_usuario")));
 
-            listaUsuarios.add(usuario);
+                listaUsuarios.add(usuario);
 
-            cursor.moveToNext();
+                cursor.moveToNext();
+
+            }
+        } catch (SQLiteException e) {
+            e.printStackTrace();
+        } finally {
+            databaseUtil.close();
         }
-
         return listaUsuarios;
     }
 
