@@ -15,6 +15,7 @@ import com.uniftec.sportscheduleapp.entities.Endereco;
 import com.uniftec.sportscheduleapp.entities.Quadra;
 import com.uniftec.sportscheduleapp.services.EnderecoServico;
 import com.uniftec.sportscheduleapp.utils.Alerts;
+import com.uniftec.sportscheduleapp.utils.SingletonUsuario;
 import com.uniftec.sportscheduleapp.utils.Utils;
 
 import java.util.List;
@@ -71,19 +72,21 @@ public class CadastroQuadra1 extends AppCompatActivity {
         EditText txtDetalhes = (EditText) findViewById(R.id.txtObs);
 
         if (requestCode == 3) {
-            if (resultCode == 1) {
+            if (resultCode == 1 || resultCode == 99) {
                 Quadra quadra = (Quadra) data.getSerializableExtra("quadra");
                 quadra.setNome(txtNome.getText().toString());
                 quadra.setDetalhes(txtDetalhes.getText().toString());
                 endereco.setNumero(txtNumero.getText().toString());
 
                 quadra.setEndereco(endereco);
-
-                Intent resultado = new Intent();
-                resultado.putExtra("quadra", quadra);
-                setResult(1, resultado);
-                finish();
+                if(resultCode ==1) {
+                    Intent resultado = new Intent();
+                    resultado.putExtra("quadra", quadra);
+                    setResult(1, resultado);
+                    finish();
+                }
             }
+
         }
         super.onActivityResult(requestCode, resultCode, data);
     }

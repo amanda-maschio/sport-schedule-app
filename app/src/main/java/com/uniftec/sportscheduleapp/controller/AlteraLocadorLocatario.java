@@ -81,8 +81,8 @@ public class AlteraLocadorLocatario extends AppCompatActivity {
                     populateUpdatedUser();
                     updateUsuario();
                     updateSingleton();
-                    Intent telaPerfil = new Intent(AlteraLocadorLocatario.this, Perfil.class);
-                    startActivity(telaPerfil);
+                    setResult(1);
+                    finish();
                 }
             }
         });

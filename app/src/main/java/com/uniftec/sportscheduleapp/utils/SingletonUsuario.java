@@ -7,6 +7,7 @@ public class SingletonUsuario {
     private static SingletonUsuario instance = null;
     private static Usuario usuario = null;
 
+
     public static SingletonUsuario getInstance() {
         if (instance == null) {
             usuario = new Usuario();

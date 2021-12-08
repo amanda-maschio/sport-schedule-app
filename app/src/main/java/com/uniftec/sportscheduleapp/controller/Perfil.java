@@ -27,13 +27,27 @@ public class Perfil extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_perfil);
 
-        usuario = SingletonUsuario.getInstance().getUsuario();
-
         nome = (TextView) findViewById(R.id.txtNome);
         email = (TextView) findViewById(R.id.txtEmail);
         tpUsuario = (TextView) findViewById(R.id.txtTpUsuario);
         imagemPerfil = (ImageView) findViewById(R.id.imagemPerfil);
         btnEditar = (ImageView) findViewById(R.id.btnEditar);
+
+        carregaUser();
+
+        btnEditar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                Intent telaAlteraLocador = new Intent(Perfil.this, AlteraLocadorLocatario.class);
+                startActivityForResult(telaAlteraLocador,1);
+
+            }
+        });
+
+    }
+    private void carregaUser(){
+        usuario = SingletonUsuario.getInstance().getUsuario();
 
         nome.setText(usuario.getPessoa().getNome());
         email.setText(usuario.getEmail());
@@ -47,17 +61,21 @@ public class Perfil extends AppCompatActivity {
         if (usuario.getPessoa().getFoto() != null) {
             imagemPerfil.setImageBitmap(BitmapFactory.decodeByteArray(usuario.getPessoa().getFoto(), 0, usuario.getPessoa().getFoto().length));
         }
+    }
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
 
-        btnEditar.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-
-                Intent telaAlteraLocador = new Intent(Perfil.this, AlteraLocadorLocatario.class);
-                startActivity(telaAlteraLocador);
-
+        if(requestCode == 1){
+            if(resultCode==1){
+                carregaUser();
             }
-        });
+        }
+        super.onActivityResult(requestCode, resultCode, data);
+    }
 
+
+    public void logout(){
+        SingletonUsuario.getInstance().setUsuario(new Usuario());
+        //chamar activity login
     }
 
 }

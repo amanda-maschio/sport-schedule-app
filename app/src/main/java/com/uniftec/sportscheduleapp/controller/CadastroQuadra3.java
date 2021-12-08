@@ -187,6 +187,14 @@ public class CadastroQuadra3 extends AppCompatActivity implements View.OnClickLi
         }
     }
 
+    @Override
+    public void onBackPressed (){
+        Intent resultado = new Intent();
+        setResult(99, resultado);
+        finish();
+    }
+
+
     protected Quadra ObjQuadra() {
         return new Quadra();
     }

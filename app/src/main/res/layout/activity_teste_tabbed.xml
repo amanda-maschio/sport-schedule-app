@@ -14,7 +14,7 @@
         android:scaleType="fitXY"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:srcCompat="@drawable/gray_bg"
+        app:srcCompat="@drawable/quadra"
         tools:ignore="MissingConstraints" />
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -33,7 +33,7 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="8dp"
             android:layout_marginTop="8dp"
-            android:text="QUADRA XXX"
+            android:text="QUADRA CAPUCHINHOS"
             android:textColor="#47525E"
             android:textSize="20sp"
             android:textStyle="bold"
@@ -46,7 +46,7 @@
             android:layout_height="25dp"
             android:layout_marginStart="8dp"
             android:clickable="true"
-            android:text="📍 Centro - Caxias do Sul"
+            android:text="📍 Rio Branco - Caxias do Sul"
             android:textColor="#8492A6"
             app:layout_constraintStart_toStartOf="@+id/llInfoQuadra"
             app:layout_constraintTop_toBottomOf="@+id/lblNomeQuadra" />

@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.viewpager.widget.ViewPager;
@@ -26,7 +27,7 @@ public class TesteTabbed extends AppCompatActivity {
         binding = ActivityTesteTabbedBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
 
-        SectionsPagerAdapter sectionsPagerAdapter = new SectionsPagerAdapter(this, getSupportFragmentManager());
+        SectionsPagerAdapter sectionsPagerAdapter = new SectionsPagerAdapter(this, getSupportFragmentManager(),this);
         ViewPager viewPager = binding.viewPager;
         viewPager.setAdapter(sectionsPagerAdapter);
         TabLayout tabs = binding.tabs;
@@ -39,10 +40,9 @@ public class TesteTabbed extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
-                //Dados mockados para teste
                 Endereco endereco = new Endereco();
                 endereco.setCep("95020-001");
-                endereco.setLogradouro("Rua Sinimbu");
+                endereco.setLogradouro("Rua Sinimbu, 1010");
                 endereco.setBairro("Centro");
                 endereco.setLocalidade("Caxias do Sul");
                 endereco.setUf("RS");
@@ -54,6 +54,18 @@ public class TesteTabbed extends AppCompatActivity {
                 startActivity(telaMaps);
             }
         });
+
+    }
+    public void finish(){
+
+        super.finish();
+
+    }
+
+    public void btnReserva(View view){
+
+        Toast.makeText(this,"Reserva Realizada com Sucesso",Toast.LENGTH_LONG).show();
+        finish();
 
     }
 }

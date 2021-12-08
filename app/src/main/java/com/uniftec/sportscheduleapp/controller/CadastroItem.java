@@ -64,4 +64,11 @@ public class CadastroItem extends AppCompatActivity {
 
     }
 
+    @Override
+    public void onBackPressed (){
+        Intent resultado = new Intent();
+        setResult(99, resultado);
+        finish();
+    }
+
 }

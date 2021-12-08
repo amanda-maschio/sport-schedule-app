@@ -13,7 +13,7 @@
         android:id="@+id/imagemquadracadastrada"
         android:layout_width="match_parent"
         android:layout_height="164dp"
-        tools:srcCompat="@drawable/quadra_exemplo_2" />
+        tools:srcCompat="@drawable/quadra" />
 
     <TextView
         android:id="@+id/nomequadra"

@@ -27,9 +27,10 @@
         android:layout_height="wrap_content"
         android:layout_margin="16dp"
         android:background="@drawable/canto_redondo"
-        android:backgroundTint="@color/white"
         android:orientation="vertical"
-        app:layout_constraintTop_toBottomOf="@+id/svLocalizarQuadra">
+        app:layout_constraintTop_toBottomOf="@+id/svLocalizarQuadra"
+        android:translationZ="2dp"
+        android:backgroundTint="@color/white">
 
         <ImageView
             android:id="@+id/imagemQuadra"
@@ -37,7 +38,7 @@
             android:layout_height="180dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:srcCompat="@drawable/quadra_exemplo_2"
+            app:srcCompat="@drawable/quadra"
             tools:ignore="MissingConstraints" />
 
         <TextView
@@ -46,7 +47,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="15dp"
             android:gravity="center"
-            android:text="QUADRA XXX"
+            android:text="QUADRA CAPUCHINHOS"
             android:textColor="@color/project_text_secondary_color"
             android:textSize="25dp"
             android:textStyle="bold" />
@@ -57,7 +58,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="5dp"
             android:gravity="center"
-            android:text="Centro - Caxias do Sul"
+            android:text="Rio Branco - Caxias do Sul"
             android:textColor="@color/project_text_secondary_color" />
 
     </LinearLayout>

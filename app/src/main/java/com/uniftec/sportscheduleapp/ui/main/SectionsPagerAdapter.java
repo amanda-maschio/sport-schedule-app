@@ -11,6 +11,7 @@ import androidx.fragment.app.FragmentPagerAdapter;
 import com.uniftec.sportscheduleapp.R;
 import com.uniftec.sportscheduleapp.controller.ReservaInfo;
 import com.uniftec.sportscheduleapp.controller.ReservaReserva;
+import com.uniftec.sportscheduleapp.controller.TesteTabbed;
 
 /**
  * A [FragmentPagerAdapter] that returns a fragment corresponding to
@@ -21,10 +22,12 @@ public class SectionsPagerAdapter extends FragmentPagerAdapter {
     @StringRes
     private static final int[] TAB_TITLES = new int[]{R.string.tab_text_1, R.string.tab_text_2};
     private final Context mContext;
+    private final TesteTabbed activity;
 
-    public SectionsPagerAdapter(Context context, FragmentManager fm) {
+    public SectionsPagerAdapter(Context context, FragmentManager fm, TesteTabbed activity) {
         super(fm);
         mContext = context;
+        this.activity = activity;
     }
 
     @Override
@@ -35,7 +38,7 @@ public class SectionsPagerAdapter extends FragmentPagerAdapter {
                 fragment = new ReservaInfo();
                 break;
             case 1:
-                fragment = new ReservaReserva();
+                fragment = new ReservaReserva(activity);
                 break;
         }
         return fragment;
