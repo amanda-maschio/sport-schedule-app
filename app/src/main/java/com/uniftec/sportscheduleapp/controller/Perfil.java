@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.graphics.BitmapFactory;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -21,6 +22,7 @@ public class Perfil extends AppCompatActivity {
     private ImageView imagemPerfil;
     private Usuario usuario;
     private ImageView btnEditar;
+    private Button btnLogout;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,6 +34,7 @@ public class Perfil extends AppCompatActivity {
         tpUsuario = (TextView) findViewById(R.id.txtTpUsuario);
         imagemPerfil = (ImageView) findViewById(R.id.imagemPerfil);
         btnEditar = (ImageView) findViewById(R.id.btnEditar);
+        btnLogout = (Button) findViewById(R.id.btnLogout);
 
         carregaUser();
 
@@ -44,6 +47,16 @@ public class Perfil extends AppCompatActivity {
 
             }
         });
+
+        btnLogout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                SingletonUsuario.getInstance().setUsuario(new Usuario());
+                Intent login = new Intent(Perfil.this, Login.class);
+                startActivity(login);
+            }
+        });
+
 
     }
     private void carregaUser(){

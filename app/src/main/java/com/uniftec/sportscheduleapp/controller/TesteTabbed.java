@@ -62,10 +62,4 @@ public class TesteTabbed extends AppCompatActivity {
 
     }
 
-    public void btnReserva(View view){
-
-        Toast.makeText(this,"Reserva Realizada com Sucesso",Toast.LENGTH_LONG).show();
-        finish();
-
-    }
 }

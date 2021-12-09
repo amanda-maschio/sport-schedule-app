@@ -13,14 +13,6 @@ public class Alerts {
         Toast.makeText(tela.getApplicationContext(), "Sem permissão para utilização.", Toast.LENGTH_SHORT).show();
     }
 
-    public static void genericErrorInOut(Activity tela) {
-        Toast.makeText(tela.getApplicationContext(), "Ocorreu um erro de acesso externo.", Toast.LENGTH_SHORT).show();
-    }
-
-    public static void genericErrorFileNotFound(Activity tela, String tpFile) {
-        Toast.makeText(tela.getApplicationContext(), tpFile + " não encontrado(a)!", Toast.LENGTH_SHORT).show();
-    }
-
     public static void toastRequiredPostService(Activity tela) {
         Toast.makeText(tela.getApplicationContext(), "Para começar, insira o CEP.", Toast.LENGTH_SHORT).show();
     }
@@ -35,6 +27,10 @@ public class Alerts {
 
     public static void registrationError(Activity tela) {
         Toast.makeText(tela.getApplicationContext(), "Ocorreu um erro inesperado ao cadastrar!", Toast.LENGTH_SHORT).show();
+    }
+
+    public static void confirmReservation(Activity tela) {
+        Toast.makeText(tela.getApplicationContext(), "Reserva realizada com sucesso!", Toast.LENGTH_LONG).show();
     }
 
 }

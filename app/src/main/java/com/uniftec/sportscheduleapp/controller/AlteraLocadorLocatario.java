@@ -134,7 +134,11 @@ public class AlteraLocadorLocatario extends AppCompatActivity {
         Pessoa pessoa = new PessoaRepository(this).findById(usuario.getPessoa().getCodPessoa());
         pessoa.setNome(usuario.getPessoa().getNome());
         pessoa.setCpf(usuario.getPessoa().getCpf());
-        pessoa.setFoto(usuario.getPessoa().getFoto());
+
+        if (imagemPerfil.getTag() != null) {
+            pessoa.setFoto(usuario.getPessoa().getFoto());
+        }
+
         pessoa.setDataNascimento(usuario.getPessoa().getDataNascimento());
 
         new PessoaRepository(this).update(pessoa);
