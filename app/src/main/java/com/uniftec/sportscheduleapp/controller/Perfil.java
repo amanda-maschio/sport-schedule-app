@@ -91,4 +91,8 @@ public class Perfil extends AppCompatActivity {
         //chamar activity login
     }
 
+    public void btnVoltarPerfil (View view){
+        finish();
+    }
+
 }
